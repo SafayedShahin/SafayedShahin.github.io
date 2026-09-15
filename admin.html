@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SHAHIN Admin</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    input, button {
+      padding: 12px;
+      margin: 5px 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      cursor: pointer;
+      background: #4f46e5;
+      color: white;
+      border: 0;
+      border-radius: 6px;
+    }
+
+    .comment {
+      margin-top: 15px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    #panel {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>SHAHIN Admin Panel</h1>
+
+  <!-- LOGIN -->
+  <div id="login">
+
+    <input
+      type="email"
+      id="email"
+      placeholder="Admin Email"
+    >
+
+    <input
+      type="password"
+      id="password"
+      placeholder="Password"
+    >
+
+    <button id="loginBtn">
+      Login
+    </button>
+
+    <p id="loginMessage"></p>
+
+  </div>
+
+
+  <!-- ADMIN PANEL -->
+  <div id="panel">
+
+    <button id="logoutBtn">
+      Logout
+    </button>
+
+    <h2>Visitor Comments</h2>
+
+    <div id="comments">
+      Loading...
+    </div>
+
+  </div>
+
+
+<script type="module">
+
+  import { initializeApp }
+    from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+
+  import {
+    getAuth,
+    signInWithEmailAndPassword,
+    onAuthStateChanged,
+    signOut
+  } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+
+  import {
+    getDatabase,
+    ref,
+    onValue
+  } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
+
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDh4DdnD-gmk9QJjX97rBcaiz-8leYNl7w",
+    authDomain: "website-6fbae.firebaseapp.com",
+    databaseURL: "https://website-6fbae-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "website-6fbae",
+    storageBucket: "website-6fbae.firebasestorage.app",
+    messagingSenderId: "47235445437",
+    appId: "1:47235445437:web:38a0d61a1d346e6e5c7dd4"
+  };
+
+
+  const app = initializeApp(firebaseConfig);
+
+  const auth = getAuth(app);
+
+  const db = getDatabase(app);
+
+
+  // LOGIN
+
+  document
+    .getElementById("loginBtn")
+    .addEventListener("click", async () => {
+
+      const email =
+        document.getElementById("email").value;
+
+      const password =
+        document.getElementById("password").value;
+
+      try {
+
+        await signInWithEmailAndPassword(
+          auth,
+          email,
+          password
+        );
+
+      } catch (error) {
+
+        document.getElementById("loginMessage").textContent =
+          "Login failed. Check email and password.";
+
+      }
+
+    });
+
+
+  // AUTH STATUS
+
+  onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+      document.getElementById("login").style.display = "none";
+
+      document.getElementById("panel").style.display = "block";
+
+      loadComments();
+
+    } else {
+
+      document.getElementById("login").style.display = "block";
+
+      document.getElementById("panel").style.display = "none";
+
+    }
+
+  });
+
+
+  // LOAD COMMENTS
+
+  function loadComments() {
+
+    const commentsRef = ref(db, "comments");
+
+    onValue(commentsRef, (snapshot) => {
+
+      const data = snapshot.val();
+
+      const box = document.getElementById("comments");
+
+      box.innerHTML = "";
+
+      if (!data) {
+
+        box.innerHTML = "<p>No comments yet.</p>";
+
+        return;
+
+      }
+
+      Object.values(data).reverse().forEach((item) => {
+
+        const div = document.createElement("div");
+
+        div.className = "comment";
+
+        div.innerHTML = `
+          <strong>Email:</strong>
+          ${item.email}
+          <br><br>
+
+          <strong>Comment:</strong>
+          ${item.comment || "(No comment)"}
+        `;
+
+        box.appendChild(div);
+
+      });
+
+    });
+
+  }
+
+
+  // LOGOUT
+
+  document
+    .getElementById("logoutBtn")
+    .addEventListener("click", () => {
+
+      signOut(auth);
+
+    });
+
+</script>
+
+</body>
+</html>

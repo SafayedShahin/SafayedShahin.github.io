@@ -1,0 +1,217 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+
+/* =========================
+   EDUCATION HEADER
+========================= */
+
+.education-header {
+    background: linear-gradient(135deg, #111827, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.education-header h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+
+/* =========================
+   EDUCATION SECTION
+========================= */
+
+.education {
+    width: 90%;
+    max-width: 1150px;
+    margin: 60px auto;
+}
+
+
+/* =========================
+   EDUCATION GRID
+========================= */
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+/* =========================
+   EDUCATION CARD
+========================= */
+
+.education-card {
+    display: block;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    color: #222;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+
+    transition: all 0.3s ease;
+}
+
+
+/* =========================
+   CARD HOVER
+========================= */
+
+.education-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================
+   CARD PHOTO
+========================= */
+
+.education-card img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* Photo Hover */
+
+.education-card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    color: #2563eb;
+
+    font-size: 21px;
+
+    margin-bottom: 15px;
+
+    line-height: 1.4;
+}
+
+.card-content p {
+    color: #666;
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   VIEW DETAILS
+========================= */
+
+.card-content span {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #2563eb;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 70px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+
+    .education-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .education-header {
+        padding: 60px 20px;
+    }
+
+    .education-header h1 {
+        font-size: 36px;
+    }
+
+    .education {
+        width: 92%;
+    }
+
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-card img {
+        height: 220px;
+    }
+
+}
