@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "website-6fbae"
-  }
+  },
+  "targets": {
+    "website-6fbae": {
+      "hosting": {
+        "safayedshahin1": [
+          "safayedshahin1"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

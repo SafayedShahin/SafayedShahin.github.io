@@ -1,0 +1,2022 @@
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f5;
+    color: #171717;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   HEADER / NAVBAR
+========================================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 75px;
+
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+
+    height: 75px;
+
+    margin: 0 auto;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+
+    color: #171717;
+
+    flex-shrink: 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 24px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    display: inline-block;
+
+    color: #222;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #777;
+}
+
+
+/* =========================================================
+   ANCHOR / SCROLL FIX
+========================================================= */
+
+#home,
+#about,
+#education,
+#IT-Experience,
+#skills,
+#adventure,
+#projects,
+#comments,
+#contact,
+#future-project {
+    scroll-margin-top: 90px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    width: 100%;
+    max-width: 1200px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding: 120px 30px 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+.hero-text {
+    width: 100%;
+    max-width: 650px;
+}
+
+.small-title {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 7vw, 90px);
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: #666;
+}
+
+.hero h2 {
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+.hero-text > p:not(.small-title) {
+    max-width: 560px;
+
+    color: #666;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.buttons {
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: #171717;
+    color: #fff;
+
+    border: 1px solid #171717;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #333;
+
+    border-color: #333;
+
+    transform: translateY(-3px);
+}
+
+.btn.secondary {
+    background: transparent;
+
+    color: #171717;
+
+    border: 1px solid #171717;
+}
+
+.btn.secondary:hover {
+    background: #171717;
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-image {
+    width: 380px;
+    height: 380px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.image-circle {
+    width: 330px;
+    height: 330px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background: #deded9;
+
+    border: 12px solid #fff;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+
+    flex-shrink: 0;
+}
+
+.image-circle img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+.section {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 100px 30px;
+}
+
+.section-title {
+    margin-bottom: 55px;
+}
+
+.section-title p {
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    color: #777;
+}
+
+.section-title h2 {
+    font-size: 48px;
+
+    line-height: 1.1;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr;
+
+    gap: 70px;
+}
+
+.about-text h3 {
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #666;
+
+    margin-bottom: 18px;
+}
+
+.about-card {
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 20px;
+
+    padding: 30px;
+}
+
+.about-card div {
+    padding: 18px 0;
+
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.about-card div:last-child {
+    border-bottom: none;
+}
+
+.about-card strong {
+    font-size: 16px;
+}
+
+.about-card span {
+    color: #777;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   EDUCATION
+========================================================= */
+
+.education-preview {
+    padding-top: 60px;
+}
+
+.education-main-card {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 22px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.education-main-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.education-card-header {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.education-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #04150a;
+    color: #fff;
+
+    border-radius: 16px;
+
+    font-size: 30px;
+
+    flex-shrink: 0;
+}
+
+.education-card-header h3 {
+    font-size: 26px;
+
+    margin-bottom: 4px;
+}
+
+.education-card-header p {
+    color: #777;
+}
+
+.education-list {
+    border-top: 1px solid #e5e5e5;
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 16px 5px;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    transition: 0.3s ease;
+}
+
+.education-item:hover {
+    padding-left: 10px;
+
+    background: #f8f8f8;
+}
+
+.education-item span {
+    width: 28px;
+
+    color: #888;
+
+    font-size: 13px;
+
+    flex-shrink: 0;
+}
+
+.education-item strong {
+    font-size: 15px;
+
+    color: #222;
+}
+
+.education-view-btn {
+    display: inline-block;
+
+    margin-top: 22px;
+
+    padding: 11px 23px;
+
+    background: #171717;
+    color: #fff;
+
+    text-decoration: none;
+
+    border: 1px solid #171717;
+
+    border-radius: 30px;
+
+    transition: 0.3s ease;
+}
+
+.education-view-btn:hover {
+    background: #444;
+
+    border-color: #444;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   DARK AREA
+   Only use this class where you actually want dark background.
+========================================================= */
+
+.dark-section {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 0;
+
+    background: #000;
+
+    color: #fff;
+}
+
+.dark-section > .section {
+    max-width: 1200px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dark-section .section-title p {
+    color: #999;
+}
+
+.dark-section .section-title h2 {
+    color: #fff;
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills-container {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 30px;
+
+    min-height: 200px;
+
+    background: #050505;
+    color: #fff;
+
+    border: 1px solid #333;
+
+    border-radius: 18px;
+
+    transition: 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+
+    background: #111;
+
+    border-color: #555;
+}
+
+.skill-card h3 {
+    font-size: 27px;
+
+    margin: 25px 0 15px;
+
+    color: #fff;
+}
+
+.skill-card p {
+    color: #aaa;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ADVENTURE
+========================================================= */
+
+.adventure-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.adventure-card {
+    overflow: hidden;
+
+    background: #fff;
+
+    color: #171717;
+
+    border: 1px solid #ddd;
+
+    border-radius: 18px;
+
+    transition: 0.3s ease;
+}
+
+.adventure-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+.adventure-image {
+    height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    background: #d8ded9;
+}
+
+.adventure-image span {
+    font-size: 95px;
+}
+
+.adventure-info {
+    padding: 22px;
+}
+
+.adventure-info h3 {
+    font-size: 24px;
+
+    margin-bottom: 10px;
+
+    color: #171717;
+}
+
+.adventure-info p {
+    color: #555;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   COMMENTS
+   IMPORTANT: WHITE BACKGROUND
+========================================================= */
+
+#comments {
+    width: 100%;
+
+    background: #fff;
+
+    color: #171717;
+
+    text-align: center;
+}
+
+#comments .section-title p {
+    color: #777;
+}
+
+#comments .section-title h2 {
+    color: #171717;
+}
+
+#comments h1 {
+    font-size: 28px;
+
+    margin-bottom: 22px;
+}
+
+#comments form {
+    width: 100%;
+    max-width: 500px;
+
+    margin: 20px auto;
+}
+
+#comments input,
+#comments textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 10px;
+
+    background: #fff;
+
+    color: #171717;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    font-family: inherit;
+
+    transition: 0.3s ease;
+}
+
+#comments input:focus,
+#comments textarea:focus {
+    border-color: #999;
+
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+#comments input::placeholder,
+#comments textarea::placeholder {
+    color: #999;
+}
+
+#comments textarea {
+    height: 120px;
+
+    resize: vertical;
+}
+
+#comments button {
+    padding: 12px 25px;
+
+    background: #4f46e5;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#comments button:hover {
+    background: #3730a3;
+}
+
+#message {
+    margin-top: 15px;
+
+    color: #333;
+}
+
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.projects-container {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.project-card {
+    padding: 30px;
+
+    min-height: 200px;
+
+    background: #050505;
+
+    color: #fff;
+
+    border: 1px solid #333;
+
+    border-radius: 18px;
+
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    background: #111;
+
+    border-color: #555;
+
+    transform: translateY(-5px);
+}
+
+.project-number {
+    color: #888;
+
+    font-size: 13px;
+}
+
+.project-card h3 {
+    font-size: 27px;
+
+    margin: 25px 0 15px;
+
+    color: #fff;
+}
+
+.project-card p {
+    color: #aaa;
+
+    font-size: 14px;
+}
+
+.project-card a {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.project-card a:hover {
+    color: #aaa;
+}
+
+
+/* =========================================================
+   PROJECT PHOTO
+========================================================= */
+
+.project-photo {
+    width: 300px;
+    max-width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    margin: 10px 0;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   PHOTO POPUP
+========================================================= */
+
+.photo-popup {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.photo-popup img {
+    width: auto;
+    height: auto;
+
+    max-width: 90%;
+    max-height: 90%;
+
+    object-fit: contain;
+}
+
+.close-popup {
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    color: #fff;
+
+    font-size: 40px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+    width: 100%;
+
+    text-align: center;
+
+    background: #f7f7f5;
+
+    color: #171717;
+}
+
+.contact .section-title {
+    margin-bottom: 30px;
+}
+
+.contact-text {
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+.contact-links {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: #171717;
+
+    background: transparent;
+
+    border: 1px solid #ccc;
+
+    padding: 12px 22px;
+
+    border-radius: 30px;
+
+    transition: 0.3s ease;
+}
+
+.contact-links a:hover {
+    background: #171717;
+
+    color: #fff;
+
+    border-color: #171717;
+}
+
+
+/* =========================================================
+   BLACK AREA
+   যদি HTML-এ .black-area ব্যবহার করো,
+   তাহলে Skills / Adventure / Projects dark হবে।
+   Comments এবং Contact আলাদাভাবে WHITE থাকবে।
+========================================================= */
+
+.black-area {
+    width: 100%;
+
+    background: #000;
+
+    color: #fff;
+}
+
+/* Black area-এর direct sections */
+.black-area > .section {
+    width: 100%;
+    max-width: 1200px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background: #000;
+
+    color: #fff;
+}
+
+/* Section titles */
+.black-area .section-title p {
+    color: #888;
+}
+
+.black-area .section-title h2 {
+    color: #fff;
+}
+
+
+/* Skills inside black area */
+.black-area .skill-card {
+    background: #050505;
+
+    color: #fff;
+
+    border: 1px solid #333;
+}
+
+.black-area .skill-card:hover {
+    background: #111;
+
+    border-color: #555;
+}
+
+.black-area .skill-card h3 {
+    color: #fff;
+}
+
+.black-area .skill-card p {
+    color: #aaa;
+}
+
+
+/* Adventure inside black area */
+.black-area .adventure-card {
+    background: #080808;
+
+    color: #fff;
+
+    border: 1px solid #333;
+}
+
+.black-area .adventure-image {
+    background: #151515;
+}
+
+.black-area .adventure-info {
+    background: #080808;
+}
+
+.black-area .adventure-info h3 {
+    color: #fff;
+}
+
+.black-area .adventure-info p {
+    color: #aaa;
+}
+
+
+/* Projects inside black area */
+.black-area .project-card {
+    background: #080808;
+
+    color: #fff;
+
+    border: 1px solid #333;
+}
+
+.black-area .project-card:hover {
+    background: #111;
+
+    border-color: #555;
+}
+
+.black-area .project-card h3 {
+    color: #fff;
+}
+
+.black-area .project-card p {
+    color: #aaa;
+}
+
+.black-area .project-card a {
+    color: #fff;
+}
+
+
+/* IMPORTANT:
+   Comments must stay WHITE
+*/
+
+.black-area #comments {
+    background: #fff !important;
+
+    color: #171717 !important;
+}
+
+.black-area #comments .section-title p {
+    color: #777 !important;
+}
+
+.black-area #comments .section-title h2 {
+    color: #171717 !important;
+}
+
+.black-area #comments h1 {
+    color: #171717 !important;
+}
+
+.black-area #comments input,
+.black-area #comments textarea {
+    background: #fff !important;
+
+    color: #171717 !important;
+
+    border: 1px solid #ddd !important;
+}
+
+.black-area #comments input::placeholder,
+.black-area #comments textarea::placeholder {
+    color: #999 !important;
+}
+
+.black-area #comments #message {
+    color: #333 !important;
+}
+
+
+/* IMPORTANT:
+   Contact stays WHITE
+*/
+
+.black-area .contact {
+    background: #f7f7f5 !important;
+
+    color: #171717 !important;
+}
+
+.black-area .contact .section-title p {
+    color: #777 !important;
+}
+
+.black-area .contact .section-title h2 {
+    color: #171717 !important;
+}
+
+.black-area .contact-text {
+    color: #666 !important;
+}
+
+.black-area .contact-links a {
+    color: #171717 !important;
+
+    background: transparent !important;
+
+    border-color: #ccc !important;
+}
+
+.black-area .contact-links a:hover {
+    background: #171717 !important;
+
+    color: #fff !important;
+
+    border-color: #171717 !important;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 45px 20px;
+
+    background: #000;
+
+    color: #fff;
+
+    text-align: center;
+
+    border-top: 1px solid #222;
+}
+
+footer h3 {
+    font-size: 28px;
+
+    color: #fff;
+}
+
+footer p {
+    color: #777;
+
+    margin-top: 8px;
+}
+
+.copyright {
+    font-size: 13px;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media screen and (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        gap: 25px;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .image-circle {
+        width: 270px;
+        height: 270px;
+
+        border-width: 8px;
+    }
+
+    .skills-container,
+    .projects-container,
+    .adventure-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        gap: 40px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* HEADER */
+
+    header {
+        height: auto;
+
+        padding: 0;
+    }
+
+    .navbar {
+        width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        padding: 8px 10px;
+
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+    .logo {
+        font-size: 21px;
+
+        line-height: 1.2;
+
+        margin: 0 0 2px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 2px;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+
+        padding: 4px 5px;
+
+        line-height: 1.2;
+    }
+
+
+    /* ANCHOR */
+
+    #home,
+    #about,
+    #education,
+    #IT-Experience,
+    #skills,
+    #adventure,
+    #projects,
+    #comments,
+    #contact,
+    #future-project {
+        scroll-margin-top: 95px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        width: 100%;
+
+        min-height: auto;
+
+        margin: 0;
+
+        padding: 110px 15px 35px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 25px;
+    }
+
+    .hero-text {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .small-title {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 12px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+
+        line-height: 1.1;
+
+        margin-bottom: 12px;
+    }
+
+    .hero h2 {
+        font-size: 17px;
+
+        margin-bottom: 12px;
+    }
+
+    .hero-text > p:not(.small-title) {
+        max-width: 100%;
+
+        font-size: 14px;
+    }
+
+    .buttons {
+        justify-content: center;
+
+        gap: 8px;
+
+        margin-top: 18px;
+    }
+
+    .btn {
+        padding: 10px 18px;
+
+        font-size: 13px;
+    }
+
+
+    /* HERO IMAGE */
+
+    .hero-image {
+        width: 100%;
+
+        max-width: 330px;
+
+        height: auto;
+
+        margin: 0 auto;
+    }
+
+    .image-circle {
+        width: min(78vw, 300px);
+
+        height: min(78vw, 300px);
+
+        max-width: 300px;
+        max-height: 300px;
+
+        border-width: 7px;
+    }
+
+    .image-circle img {
+        width: 100%;
+
+        height: 100%;
+    }
+
+
+    /* GENERAL SECTION */
+
+    .section {
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 0;
+
+        padding: 45px 15px;
+    }
+
+    .section-title {
+        margin-bottom: 25px;
+    }
+
+    .section-title p {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+
+        margin-top: 5px;
+    }
+
+
+    /* ABOUT */
+
+    .about-content {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+    .about-text h3 {
+        font-size: 24px;
+
+        margin-bottom: 12px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+
+        margin-bottom: 12px;
+    }
+
+    .about-card {
+        padding: 18px;
+
+        border-radius: 16px;
+    }
+
+    .about-card div {
+        padding: 13px 0;
+
+        gap: 10px;
+    }
+
+    .about-card strong,
+    .about-card span {
+        font-size: 12px;
+    }
+
+
+    /* EDUCATION */
+
+    .education-preview {
+        padding-top: 25px;
+    }
+
+    .education-main-card {
+        padding: 18px 14px;
+
+        border-radius: 18px;
+    }
+
+    .education-card-header {
+        gap: 10px;
+
+        margin-bottom: 18px;
+    }
+
+    .education-icon {
+        width: 52px;
+        height: 52px;
+
+        font-size: 25px;
+
+        border-radius: 13px;
+    }
+
+    .education-card-header h3 {
+        font-size: 20px;
+    }
+
+    .education-card-header p {
+        font-size: 11px;
+    }
+
+    .education-item {
+        gap: 8px;
+
+        padding: 12px 2px;
+    }
+
+    .education-item span {
+        width: 23px;
+
+        font-size: 10px;
+    }
+
+    .education-item strong {
+        font-size: 12px;
+
+        line-height: 1.35;
+    }
+
+    .education-view-btn {
+        width: 100%;
+
+        text-align: center;
+
+        margin-top: 18px;
+
+        padding: 10px;
+
+        font-size: 12px;
+    }
+
+
+    /* SKILLS */
+
+    .skills-container {
+        width: 100%;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 8px;
+    }
+
+    .skill-card {
+        width: 100%;
+
+        min-width: 0;
+
+        min-height: 0;
+
+        padding: 13px;
+
+        border-radius: 12px;
+    }
+
+    .skill-card h3 {
+        font-size: 16px;
+
+        margin: 9px 0;
+    }
+
+    .skill-card p {
+        font-size: 11px;
+
+        line-height: 1.4;
+    }
+
+
+    /* ADVENTURE */
+
+    .adventure-grid {
+        width: 100%;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 8px;
+    }
+
+    .adventure-card {
+        width: 100%;
+
+        min-width: 0;
+
+        border-radius: 12px;
+    }
+
+    .adventure-image {
+        height: 130px;
+    }
+
+    .adventure-image span {
+        font-size: 55px;
+    }
+
+    .adventure-info {
+        padding: 10px;
+    }
+
+    .adventure-info h3 {
+        font-size: 16px;
+
+        margin-bottom: 5px;
+    }
+
+    .adventure-info p {
+        font-size: 11px;
+
+        line-height: 1.35;
+    }
+
+
+    /* PROJECTS */
+
+    .projects-container {
+        width: 100%;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 8px;
+    }
+
+    .project-card {
+        width: 100%;
+
+        min-width: 0;
+
+        min-height: 0;
+
+        padding: 13px;
+
+        border-radius: 12px;
+    }
+
+    .project-number {
+        font-size: 10px;
+    }
+
+    .project-card h3 {
+        font-size: 16px;
+
+        margin: 9px 0;
+    }
+
+    .project-card p {
+        font-size: 11px;
+
+        line-height: 1.4;
+    }
+
+    .project-card a {
+        margin-top: 12px;
+
+        font-size: 11px;
+    }
+
+    .project-photo {
+        width: 100%;
+
+        max-width: 100%;
+
+        height: auto;
+
+        margin: 7px 0;
+
+        border-radius: 9px;
+    }
+
+
+    /* COMMENTS */
+
+    #comments {
+        width: 100%;
+
+        padding-top: 30px;
+
+        padding-bottom: 35px;
+
+        background: #fff !important;
+    }
+
+    #comments h1 {
+        font-size: 20px;
+
+        line-height: 1.3;
+
+        margin-bottom: 18px;
+    }
+
+    #comments form {
+        width: 100%;
+
+        margin: 15px auto;
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+        background: #f7f7f5 !important;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 35px 15px;
+    }
+
+    footer h3 {
+        font-size: 22px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+========================================================= */
+
+@media screen and (max-width: 480px) {
+
+    /* HEADER */
+
+    .navbar {
+        padding: 6px 5px;
+
+        gap: 2px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-links {
+        gap: 1px;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+
+        padding: 3px 4px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding-top: 100px;
+
+        padding-left: 12px;
+        padding-right: 12px;
+
+        padding-bottom: 25px;
+
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+
+        line-height: 1.15;
+
+        margin-bottom: 12px;
+    }
+
+    .hero h2 {
+        font-size: 16px;
+    }
+
+    .hero-text > p:not(.small-title) {
+        font-size: 13px;
+    }
+
+
+    /* IMAGE */
+
+    .image-circle {
+        width: 76vw;
+
+        height: 76vw;
+
+        max-width: 270px;
+
+        max-height: 270px;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        padding: 35px 12px;
+    }
+
+    .section-title {
+        margin-bottom: 20px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+
+    /* CARDS */
+
+    .skills-container,
+    .projects-container,
+    .adventure-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 6px;
+    }
+
+    .skill-card,
+    .project-card {
+        padding: 10px;
+
+        border-radius: 10px;
+    }
+
+    .skill-card h3,
+    .project-card h3 {
+        font-size: 14px;
+
+        margin: 7px 0;
+    }
+
+    .skill-card p,
+    .project-card p,
+    .adventure-info p {
+        font-size: 10px;
+
+        line-height: 1.4;
+    }
+
+
+    /* ADVENTURE */
+
+    .adventure-image {
+        height: 110px;
+    }
+
+    .adventure-image span {
+        font-size: 45px;
+    }
+
+    .adventure-info {
+        padding: 8px;
+    }
+
+    .adventure-info h3 {
+        font-size: 14px;
+    }
+
+
+    /* EDUCATION */
+
+    .education-main-card {
+        padding: 14px 10px;
+    }
+
+    .education-card-header h3 {
+        font-size: 18px;
+    }
+
+    .education-card-header p {
+        font-size: 10px;
+    }
+
+    .education-item {
+        padding: 10px 0;
+
+        gap: 6px;
+    }
+
+    .education-item strong {
+        font-size: 10px;
+    }
+
+    .education-view-btn {
+        font-size: 11px;
+
+        padding: 9px;
+    }
+
+
+    /* COMMENTS */
+
+    #comments h1 {
+        font-size: 17px;
+    }
+
+    #comments input,
+    #comments textarea {
+        font-size: 14px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 30px 12px;
+    }
+
+    footer h3 {
+        font-size: 20px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONE
+========================================================= */
+
+@media screen and (max-width: 380px) {
+
+    .nav-links a {
+        font-size: 8px;
+
+        padding: 3px 3px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero h2 {
+        font-size: 14px;
+    }
+
+    .skills-container,
+    .projects-container,
+    .adventure-grid {
+        gap: 5px;
+    }
+
+    .skill-card,
+    .project-card {
+        padding: 8px;
+    }
+
+    .skill-card h3,
+    .project-card h3 {
+        font-size: 13px;
+    }
+
+    .skill-card p,
+    .project-card p,
+    .adventure-info p {
+        font-size: 9px;
+    }
+
+    .education-item strong {
+        font-size: 9px;
+    }
+}
