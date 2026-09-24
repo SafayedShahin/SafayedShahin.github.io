@@ -1,12 +1,11 @@
 {
   "hosting": {
-    "site": "safayedshahin1",
-    "public": ".",
+    "public": "Use an existing project",
     "ignore": [
       "firebase.json",
-      ".firebaserc",
       "**/.*",
       "**/node_modules/**"
     ]
   }
 }
+c
