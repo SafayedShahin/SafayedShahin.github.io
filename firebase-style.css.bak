@@ -772,7 +772,7 @@ footer p {
 
 @media screen and (max-width: 800px) {
 
-    
+    /* HEADER */
 
     .navbar {
         height: auto;
@@ -809,7 +809,7 @@ footer p {
     }
 
 
-    
+    /* HERO */
 
     .hero {
         min-height: auto;
@@ -844,7 +844,7 @@ footer p {
     }
 
 
-    
+    /* IMAGE */
 
     .hero-image {
         width: 100%;
@@ -859,7 +859,7 @@ footer p {
     }
 
 
-    
+    /* SECTION */
 
     .section {
         padding: 65px 20px;
@@ -874,7 +874,7 @@ footer p {
     }
 
 
-    
+    /* ABOUT */
 
     .about-content {
         grid-template-columns: 1fr;
@@ -883,7 +883,7 @@ footer p {
     }
 
 
-    
+    /* CARDS */
 
     .skills-container,
     .projects-container,
@@ -982,7 +982,7 @@ footer p {
     }
 
 
-    
+    /* HERO */
 
     .hero {
         padding: 105px 15px 35px;
@@ -1017,7 +1017,7 @@ footer p {
     }
 
 
-    
+    /* IMAGE */
 
     .image-circle {
         width: 75vw;
@@ -1028,7 +1028,7 @@ footer p {
     }
 
 
-    
+    /* SECTION */
 
     .section {
         padding: 45px 15px;
@@ -1049,7 +1049,7 @@ footer p {
     }
 
 
-    
+    /* CARDS */
 
     .skills-container,
     .projects-container,
@@ -1127,7 +1127,7 @@ footer p {
     }
 
 
-    
+    /* ABOUT CARD */
 
     .about-card {
         padding: 15px;
@@ -1152,7 +1152,7 @@ footer p {
     }
 
 
-    
+    /* FOOTER */
 
     footer {
         padding: 35px 15px;
@@ -1269,24 +1269,24 @@ footer p {
    CARD BACKGROUND → BLACK
 ========================================= */
 
-
+/* Skills + Projects section */
 .dark-section {
     background: #000000 !important;
 }
 
-
+/* Skill cards */
 .skill-card {
     background: #000000;
     border-color: #8e1111;
 }
 
-
+/* Project cards */
 .project-card {
     background: #000000;
     border-color: #8e1111;
 }
 
-
+/* Hover করলে */
 .skill-card:hover,
 .project-card:hover {
     background: #111111;

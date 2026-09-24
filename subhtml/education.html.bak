@@ -6,13 +6,13 @@
 
     <title>My Education</title>
 
-    
+    <!-- One CSS File -->
     <link rel="stylesheet" href="education.css">
 </head>
 
 <body>
 
-    
+    <!-- Header -->
     <header class="education-header">
         
         
@@ -20,12 +20,12 @@
     </header>
 
 
-    
+    <!-- Education Section -->
     <section class="education">
 
         <div class="education-grid">
 
-            
+            <!-- School 1 -->
             <a href="primari.html" class="education-card">
 
                 <img src="../images/blender/education/card/1.png" alt="Fordabad South Government Primary School">
@@ -43,7 +43,7 @@
             </a>
 
 
-            
+            <!-- School 2 -->
             <a href="school.html" class="education-card">
 
                 <img src="../images/blender/education/card/3.JPG" alt="My Secondary School">
@@ -61,7 +61,7 @@
             </a>
 
 
-            
+            <!-- College -->
             <a href="colleg.html" class="education-card">
 
             <img src="../images/blender/education/card/2.JPG" alt="My College">
@@ -81,7 +81,7 @@
             </a>
 
 
-            
+            <!-- Japanese Language School -->
             <a href="japaniss.html" class="education-card">
 
                 <img src="../images/blender/education/card/4.JPG" alt="Japanese Language School">
@@ -100,7 +100,7 @@
             </a>
 
 
-            
+            <!-- University -->
             <a href="univercity.html" class="education-card">
 
                 <img src="../images/blender/education/card/5.JPG" alt="My University">
@@ -124,7 +124,7 @@
     </section>
 
 
-    
+    <!-- Footer -->
     <footer>
         <p>© 2026 My Education | All Rights Reserved</p>
     </footer>

@@ -11,16 +11,16 @@
 
 <body>
 
-
+<!-- Navigation -->
  <header>
     <nav class="navbar">
         <h2 class="logo">Shahin.</h2>
 
 <ul class="nav-links">
     <li><a href="#home">Home</a></li>
-    <li><a href="#Education">Education</a></li>
+    <li><a href="subhtml/education.html">Education</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#IT Experience">skills</a></li>
+    <li><a href="#skills">skills</a></li>
     <li><a href="#adventure">Adventure</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -31,7 +31,7 @@
 </header>
 
 
-
+<!-- Hero Section -->
 <section id="home" class="hero">
 
 <div class="hero-text">
@@ -62,7 +62,7 @@ camping and exploring the world.
 </section>
 
 
-
+<!-- About -->
 <section id="about" class="section">
 
 <div class="section-title">
@@ -117,69 +117,10 @@ continuing to explore the world.
 
 </div>
 </section>
-<!-- =========================
-     EDUCATION
-========================= -->
-
-<section id="Education" class="section  ">
-
-    <div class="section-title">
-        <p>MY EDUCATION</p>
-        <h2>Educational Journey</h2>
-    </div>
-
-    <div class="education-main-card">
-
-        <div class="education-card-header">
-            <span class="education-icon">🎓</span>
-
-            <div>
-                <h3>School . College . University</h3>
-                <p>School • College • University</p>
-            </div>
-        </div>
-
-        <div class="education-list">
-
-            <div class="education-item">
-                <span>01</span>
-                <strong>Fordabad South Government Primary School</strong>
-            </div>
-
-            <div class="education-item">
-                <span>02</span>
-                <strong>Fordabad Ideal High School</strong>
-            </div>
-
-            <div class="education-item">
-                <span>03</span>
-                <strong>Fordabad Dr. Rowshan Alam College</strong>
-            </div>
-
-            <div class="education-item">
-                <span>04</span>
-                <strong>International Futurity Academy</strong>
-            </div>
-
-            <div class="education-item">
-                <span>05</span>
-                <strong>Hagoromo International University</strong>
-            </div>
-
-        </div>
-
-        <p class="education-location">🇧🇩 Bangladesh → 🇯🇵 Japan</p>
-
-        <a href="subhtml/education.html" class="education-view-btn">
-            View Details →
-        </a>
-
-    </div>
-
-</section>
 
 
-<div id="IT Experience" class="section dark-section">
+<!-- Skills -->
+<div id="skills" class="section dark-section">
 
 <div class="section-title">
 <p>WHAT I KNOW</p>
@@ -256,7 +197,7 @@ continuing to explore the world.
 </section>
 
 
-
+<!-- Adventure -->
 <section id="adventure" class="section">
 
 <div class="section-title">
@@ -318,7 +259,7 @@ and unforgettable experiences.
 </section>
 
 
-
+<!-- Projects -->
 <section id="projects" class="section dark-section">
 
 <div class="section-title">
@@ -334,14 +275,13 @@ and unforgettable experiences.
 <h3>Personal Website</h3>
 
 <p>
-  A responsive personal portfolio website
-  created using HTML, javascript and CSS.
+A responsive personal portfolio website
+created using HTML ,javascriptand CSS.
 </p>
 
-<a href="projects/portfolio.html">View Project →</a>
-
-<link rel="stylesheet" href="#">
+<a href="#">View Project →</a>
 </div>
+
 
 <div class="project-card">
 <span class="project-number">02</span>
@@ -382,6 +322,8 @@ Something new I will build in the future.
 
 
 <section id="comments" class="section ">
+
+
 
 
  <h1> 📝 Any Comment for SHAHIN? Please Submit Below 📝</h1>
@@ -468,7 +410,7 @@ Something new I will build in the future.
 
 </script>
 
-
+<!-- Contact -->
 <section id="contact" class="section contact">
 
 <div class="section-title">
@@ -485,13 +427,13 @@ Feel free to contact me.
 <div class="contact-links">
 <a href="mailto:safayedsahin@gmail.com">📧 Email</a>
 <a href="https://www.instagram.com/safayedsahin_">📷 Instagram</a>
-<a href="https://github.com/SafayedShahin">💻 GitHub</a>
+<a href="https://github.com/safayedsahin">💻 GitHub</a>
 </div>
 
 </section>
 
 
-
+<!-- Footer -->
 <footer>
 
 <h3>Md Shahin Miah</h3>

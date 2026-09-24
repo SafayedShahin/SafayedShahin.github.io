@@ -11,7 +11,7 @@ body {
   line-height: 1.7;
 }
 
-
+/* Project Details */
 .project-details {
   width: 90%;
   max-width: 1000px;
@@ -22,14 +22,14 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-
+/* Title */
 .project-details h1 {
   font-size: 42px;
   color: #38bdf8;
   margin-bottom: 30px;
 }
 
-
+/* Project Image */
 .project-details img {
   width: 100%;
   max-height: 500px;
@@ -38,7 +38,7 @@ body {
   margin-bottom: 35px;
 }
 
-
+/* Headings */
 .project-details h2 {
   font-size: 26px;
   color: #38bdf8;
@@ -46,14 +46,14 @@ body {
   margin-bottom: 12px;
 }
 
-
+/* Paragraph */
 .project-details p {
   color: #cbd5e1;
   font-size: 17px;
   margin-bottom: 20px;
 }
 
-
+/* Lists */
 .project-details ul {
   margin-left: 25px;
   color: #cbd5e1;
@@ -63,7 +63,7 @@ body {
   margin: 8px 0;
 }
 
-
+/* Back Button */
 .project-details a {
   display: inline-block;
   margin-top: 35px;
@@ -82,7 +82,7 @@ body {
   transform: translateY(-2px);
 }
 
-
+/* Mobile Responsive */
 @media (max-width: 600px) {
   .project-details {
     width: 92%;
@@ -118,7 +118,7 @@ body {
   transition: all 0.3s ease;
 }
 
-
+/* Live Website Button */
 .live-btn {
   background: #38bdf8;
   color: #0f172a;
@@ -130,7 +130,7 @@ body {
   transform: translateY(-3px);
 }
 
-
+/* GitHub Button */
 .github-btn {
   background: #24292e;
   color: #fff;
@@ -141,7 +141,7 @@ body {
   transform: translateY(-3px);
 }
 
-
+/* Mobile */
 @media (max-width: 600px) {
   .project-buttons {
     flex-direction: column;

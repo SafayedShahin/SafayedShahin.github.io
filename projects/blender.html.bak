@@ -1,0 +1,18 @@
+<h1>project photos</h1>
+<h3> this is a collection of photos from my blender project</h3>
+<h3>POKEMON>>>><h1>SNORLAX</h1></h3>
+<link rel="stylesheet" href="../style.css">
+<img src="../images/blender/1.png" class="project-photo" onclick="openPhoto(this)">
+<img src="../images/blender/2.png" class="project-photo" onclick="openPhoto(this)">
+<img src="../images/blender/3.png" class="project-photo" onclick="openPhoto(this)">
+<img src="../images/blender/4.png" class="project-photo" onclick="openPhoto(this)">
+
+<h2>project video</h2>
+
+<video controls width="100%">
+<source src="../video/blender.mp4/Screen Recording 2026-09-10 at 2.40.29.mov" type="video/mp4" onelink="Pluginvideo(this)">
+</video>
+<div class="photo-popup" id="photoPopup">
+    <span class="close-photo" onelink="closePhoto()">x</span>
+    <img id="largePhoto">
+</div>

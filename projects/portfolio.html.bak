@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+
+  <main class="project-details">
+    <h1>My Portfolio Website</h1>
+<a 
+      href="https://SafayedShahin.github.io"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="project-btn live-btn">
+      Visit Live Website →
+    </a>
+
+    <a 
+      href="https://github.com/SafayedShahin/SafayedShahin.github.io"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="project-btn github-btn">
+      View Source Code →
+    </a>
+
+
+</a>
+
+
+    <img src="../images/portfolio/Screenshot 2026-09-24 at 21.56.06.png">
+
+    <h2>About the Project</h2>
+    <p>
+      This is my personal portfolio website where I showcase
+      my skills, projects and contact information.
+    </p>
+
+    <h2>Technologies</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+
+    <h2>Features</h2>
+    <ul>
+      <li>Responsive design</li>
+      <li>Project showcase</li>
+      <li>Contact section</li>
+    </ul>
+
+    <a href="../index.html" class="back-btn">← Back to Projects</a>
+
+
+</body>
+</html>

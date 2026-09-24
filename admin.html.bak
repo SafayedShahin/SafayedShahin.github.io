@@ -47,7 +47,7 @@
 
   <h1>SHAHIN Admin Panel</h1>
 
-  
+  <!-- LOGIN -->
   <div id="login">
 
     <input
@@ -71,7 +71,7 @@
   </div>
 
 
-  
+  <!-- ADMIN PANEL -->
   <div id="panel">
 
     <button id="logoutBtn">
