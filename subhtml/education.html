@@ -1,133 +1,323 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Education</title>
+    <title>My Educational Journey</title>
 
-    
+    <meta name="description"
+          content="Explore my educational journey from primary school to university in Bangladesh and Japan.">
+
+    <!-- Education page CSS -->
     <link rel="stylesheet" href="education.css">
+
+    <!-- Main website CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Small language button CSS -->
+    <link rel="stylesheet" href="../language-button.css">
 </head>
 
 <body>
 
-    
+    <!-- LANGUAGE BUTTON -->
+    <button
+        id="languageToggle"
+        class="language-toggle"
+        type="button"
+        aria-label="Change website language">
+        🇯🇵 日本語
+    </button>
+
+    <!-- HEADER -->
     <header class="education-header">
-        
-        
-        <h1>My Educational Journey</h1>
+
+        <span
+            class="header-label"
+            data-en="My Background"
+            data-ja="私の学歴">
+            My Background
+        </span>
+
+        <h1
+            data-en="My Educational Journey"
+            data-ja="私の学びの歩み">
+            My Educational Journey
+        </h1>
+
+        <p
+            data-en="Explore my educational journey, from my early school years in Bangladesh to my university studies in Japan."
+            data-ja="バングラデシュでの初等教育から、日本での大学生活まで、私の学びの歩みをご紹介します。">
+            Explore my educational journey, from my early school years in Bangladesh to my university studies in Japan.
+        </p>
+
     </header>
 
-
-    
-    <section class="education">
-
+    <!-- EDUCATION CARDS -->
+    <main class="education">
         <div class="education-grid">
 
-            
+            <!-- PRIMARY SCHOOL -->
             <a href="primari.html" class="education-card">
 
-                <img src="../images/blender/education/card/1.png" alt="Fordabad South Government Primary School">
+                <img
+                    src="../images/blender/education/card/1.png"
+                    alt="Fordabad South Government Primary School"
+                    loading="lazy">
 
                 <div class="card-content">
-                    <h3>Fordabad South Government Primary School</h3>
 
-                    <p>🏫 Primary School</p>
-                    <p>📅 2008 - 2013</p>
-                    <p>📍 Bangladesh</p>
+                    <span class="school-type"
+                          data-en="Primary Education"
+                          data-ja="初等教育">
+                        Primary Education
+                    </span>
 
-                    <span>View Details →</span>
+                    <h3 data-en="Fordabad South Government Primary School"
+                        data-ja="フォルダバード南政府小学校">
+                        Fordabad South Government Primary School
+                    </h3>
+
+                    <p data-en="🏫 Primary School"
+                       data-ja="🏫 小学校">
+                        🏫 Primary School
+                    </p>
+
+                    <p data-en="📅 2008 – 2013"
+                       data-ja="📅 2008年～2013年">
+                        📅 2008 – 2013
+                    </p>
+
+                    <p data-en="📍 Bangladesh"
+                       data-ja="📍 バングラデシュ">
+                        📍 Bangladesh
+                    </p>
+
+                    <span class="view-details"
+                          data-en="View Details →"
+                          data-ja="詳細を見る →">
+                        View Details →
+                    </span>
+
                 </div>
-
             </a>
 
-
-            
+            <!-- HIGH SCHOOL -->
             <a href="school.html" class="education-card">
 
-                <img src="../images/blender/education/card/3.JPG" alt="My Secondary School">
+                <img
+                    src="../images/blender/education/card/3.JPG"
+                    alt="Fordabad Ideal High School"
+                    loading="lazy">
 
                 <div class="card-content">
-                    <h3>Fordabad Ideal High School</h3>
-                    <p>📚 Studied Accounting</p>
 
-                    <p>🏫 Secondary School</p>
-                    <p>📅 2014 - 2019</p>
-                    <p>📍 Bangladesh</p>
-                    <span>View Details →</span>
+                    <span class="school-type"
+                          data-en="Secondary Education"
+                          data-ja="中等教育">
+                        Secondary Education
+                    </span>
+
+                    <h3 data-en="Fordabad Ideal High School"
+                        data-ja="フォルダバード・アイディアル高校">
+                        Fordabad Ideal High School
+                    </h3>
+
+                    <p data-en="📚 Subject: Accounting . Finance . Business Studies"
+                       data-ja="📚 専攻：会計 . 金融 . ビジネス研究">
+                        📚 Subject: Accounting . Finance . Business Studies
+                    </p>
+
+                    <p data-en="🏫 Secondary School"
+                       data-ja="🏫 中学校・高校">
+                        🏫 Secondary School
+                    </p>
+
+                    <p data-en="📅 2014 – 2019"
+                       data-ja="📅 2014年～2019年">
+                        📅 2014 – 2019
+                    </p>
+
+                    <p data-en="📍 Bangladesh"
+                       data-ja="📍 バングラデシュ">
+                        📍 Bangladesh
+                    </p>
+
+                    <span class="view-details"
+                          data-en="View Details →"
+                          data-ja="詳細を見る →">
+                        View Details →
+                    </span>
+
                 </div>
-
             </a>
 
-
-            
+            <!-- COLLEGE -->
             <a href="colleg.html" class="education-card">
 
-            <img src="../images/blender/education/card/2.JPG" alt="My College">
+                <img
+                    src="../images/blender/education/card/2.JPG"
+                    alt="Fordabad Dr. Rowshan Alam College"
+                    loading="lazy">
 
                 <div class="card-content">
-                    <h3>Fordabad Dr. Rowshan Alam College</h3>
-                    <p>📚 Studied Accounting</p>
 
+                    <span class="school-type"
+                          data-en="College Education"
+                          data-ja="カレッジ教育">
+                        College Education
+                    </span>
 
-                    <p>🎓 College</p>
-                    <p>📅 2019 - 2021</p>
-                    <p>📍 Bangladesh</p>
+                    <h3 data-en="Fordabad Dr. Rowshan Alam College"
+                        data-ja="フォルダバード・Dr. ロウシャン・アラム・カレッジ">
+                        Fordabad Dr. Rowshan Alam College
+                    </h3>
 
-                    <span>View Details →</span>
+                    <p data-en="📚 Subject: Accounting . Finance & Information Technology"
+                       data-ja="📚 専攻：会計 . 金融 . 情報技術">
+                        📚 Subject: Accounting . Finance & Information Technology
+                    </p>
+
+                    <p data-en="🎓 College"
+                       data-ja="🎓 カレッジ">
+                        🎓 College
+                    </p>
+
+                    <p data-en="📅 2019 – 2021"
+                       data-ja="📅 2019年～2021年">
+                        📅 2019 – 2021
+                    </p>
+
+                    <p data-en="📍 Bangladesh"
+                       data-ja="📍 バングラデシュ">
+                        📍 Bangladesh
+                    </p>
+
+                    <span class="view-details"
+                          data-en="View Details →"
+                          data-ja="詳細を見る →">
+                        View Details →
+                    </span>
+
                 </div>
-
             </a>
 
-
-            
+            <!-- JAPANESE LANGUAGE SCHOOL -->
             <a href="japaniss.html" class="education-card">
 
-                <img src="../images/blender/education/card/4.JPG" alt="Japanese Language School">
+                <img
+                    src="../images/blender/education/card/4.JPG"
+                    alt="International Futurity Academy"
+                    loading="lazy">
 
                 <div class="card-content">
-                    <h3>International Futurity Academy</h3>
-                    <p>📚 Studied Japanese Language</p>
 
+                    <span class="school-type"
+                          data-en="Japanese Language Education"
+                          data-ja="日本語教育">
+                        Japanese Language Education
+                    </span>
 
-                    <p>🇯🇵 Japanese Language School</p>
-                    <p>📅 2022- 2024</p>
-                    <p>📍 Japan, osaka</p>
-                    <span>View Details →</span>
+                    <h3 data-en="International Futurity Academy"
+                        data-ja="インターナショナル・フューチャリティ・アカデミー">
+                        International Futurity Academy
+                    </h3>
+
+                    <p data-en="📚 Studied Japanese Language"
+                       data-ja="📚 日本語を学習">
+                        📚 Studied Japanese Language
+                    </p>
+
+                    <p data-en="🇯🇵 Japanese Language School"
+                       data-ja="🇯🇵 日本語学校">
+                        🇯🇵 Japanese Language School
+                    </p>
+
+                    <p data-en="📅 2022 – 2024"
+                       data-ja="📅 2022年～2024年">
+                        📅 2022 – 2024
+                    </p>
+
+                    <p data-en="📍 Osaka, Japan"
+                       data-ja="📍 日本・大阪">
+                        📍 Osaka, Japan
+                    </p>
+
+                    <span class="view-details"
+                          data-en="View Details →"
+                          data-ja="詳細を見る →">
+                        View Details →
+                    </span>
+
                 </div>
-
             </a>
 
-
-            
+            <!-- UNIVERSITY -->
             <a href="univercity.html" class="education-card">
 
-                <img src="../images/blender/education/card/5.JPG" alt="My University">
+                <img
+                    src="../images/blender/education/card/5.JPG"
+                    alt="Hagoromo International University"
+                    loading="lazy">
 
                 <div class="card-content">
-                    <h3>Hagoromo International University</h3>
-                    <p>📚  Information Systems and Technology</p>
 
+                    <span class="school-type"
+                          data-en="Higher Education"
+                          data-ja="高等教育">
+                        Higher Education
+                    </span>
 
+                    <h3 data-en="Hagoromo International University"
+                        data-ja="羽衣国際大学">
+                        Hagoromo International University
+                    </h3>
 
-                    <p>🏛️ University</p>
-                    <p>📅 2024 - Present</p>
-                    <p>📍 Japan, osaka</p>
-                    <span>View Details →</span>
+                    <p data-en="📚 Information Systems Course"
+                       data-ja="📚 情報システムコース">
+                        📚 Information Systems Course
+                    </p>
+
+                    <p data-en="🏛️ University"
+                       data-ja="🏛️ 大学">
+                        🏛️ University
+                    </p>
+
+                    <p data-en="📅 2024 – Present"
+                       data-ja="📅 2024年～現在">
+                        📅 2024 – Present
+                    </p>
+
+                    <p data-en="📍 Osaka, Japan"
+                       data-ja="📍 日本・大阪">
+                        📍 Osaka, Japan
+                    </p>
+
+                    <span class="view-details"
+                          data-en="View Details →"
+                          data-ja="詳細を見る →">
+                        View Details →
+                    </span>
+
                 </div>
-
             </a>
 
         </div>
+    </main>
 
-    </section>
-
-
-    
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 My Education | All Rights Reserved</p>
+        <p
+            data-en="© 2026 My Education | All Rights Reserved"
+            data-ja="© 2026 私の学歴 | All Rights Reserved">
+            © 2026 My Education | All Rights Reserved
+        </p>
     </footer>
+
+    <!-- Shared language system -->
+    <script src="../language.js"></script>
 
 </body>
 </html>

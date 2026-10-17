@@ -1,60 +1,202 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Details</title>
-  <link rel="stylesheet" href="portfolio.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio Website | Project Details</title>
+    <meta name="description" content="Details of my personal portfolio website, built with HTML, CSS and JavaScript.">
+
+    <link rel="stylesheet" href="portfolio.css">
+
+
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../language-button.css">
 </head>
 
 <body>
 
-  <main class="project-details">
-    <h1>My Portfolio Website</h1>
-<a 
-      href="https://SafayedShahin.github.io"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="project-btn live-btn">
-      Visit Live Website →
-    </a>
+    <!-- LANGUAGE SWITCH -->
+    <div class="language-switch" aria-label="Select language">
+        
 
-    <a 
-      href="https://github.com/SafayedShahin/SafayedShahin.github.io"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="project-btn github-btn">
-      View Source Code →
-    </a>
+        
+    </div>
+
+    <main class="project-details">
+
+        <!-- PROJECT HEADER -->
+        <header class="project-header">
+            <span class="project-label"
+                  data-en="Personal Project"
+                  data-ja="個人プロジェクト">
+                Personal Project
+            </span>
+
+            <h1 data-en="My Portfolio Website"
+                data-ja="ポートフォリオサイト">
+                My Portfolio Website
+            </h1>
+
+            <p data-en="A personal website to introduce my skills, showcase my projects, and share my contact information."
+               data-ja="自分のスキルや制作したプロジェクトを紹介し、連絡先を共有するための個人ウェブサイトです。">
+                A personal website to introduce my skills, showcase my projects, and share my contact information.
+            </p>
+
+            <div class="project-actions">
+                <a href="https://SafayedShahin.github.io"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="project-btn live-btn"
+                   data-en="Visit Live Website ↗"
+                   data-ja="ウェブサイトを見る ↗">
+                    Visit Live Website ↗
+                </a>
+
+                <a href="https://github.com/SafayedShahin/SafayedShahin.github.io"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="project-btn github-btn"
+                   data-en="View Source Code ↗"
+                   data-ja="ソースコードを見る ↗">
+                    View Source Code ↗
+                </a>
+            </div>
+        </header>
+
+        <!-- PROJECT SCREENSHOT -->
+        <figure class="project-image">
+            <img
+                src="../images/portfolio/Screenshot 2026-09-24 at 21.56.06.png"
+                alt="Screenshot of my personal portfolio website"
+                loading="lazy">
+
+            <figcaption class="image-caption"
+                        data-en="Preview of my personal portfolio website"
+                        data-ja="ポートフォリオサイトの画面">
+                Preview of my personal portfolio website
+            </figcaption>
+        </figure>
+
+        <!-- PROJECT INFORMATION -->
+        <div class="details-grid">
+
+            <section class="detail-card">
+                <h2 data-en="About the Project"
+                    data-ja="プロジェクトについて">
+                    About the Project
+                </h2>
+
+                <p data-en="I created this personal portfolio website to present my skills, projects, and background. It helps visitors learn about my work and contact me."
+                   data-ja="自分のスキル、制作したプロジェクト、経歴を紹介するために、このポートフォリオサイトを作成しました。訪問者が私の活動を知り、連絡できるようにしています。">
+                    I created this personal portfolio website to present my skills, projects, and background. It helps visitors learn about my work and contact me.
+                </p>
+            </section>
+
+            <section class="detail-card">
+                <h2 data-en="Technologies"
+                    data-ja="使用技術">
+                    Technologies
+                </h2>
+
+                <div class="tech-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>GitHub Pages</span>
+                </div>
+            </section>
+
+            <section class="detail-card">
+                <h2 data-en="Key Features"
+                    data-ja="主な機能">
+                    Key Features
+                </h2>
+
+                <ul>
+                    <li data-en="Responsive design for mobile and desktop"
+                        data-ja="スマートフォンとパソコンに対応したデザイン">
+                        Responsive design for mobile and desktop
+                    </li>
+
+                    <li data-en="Personal skills and project showcase"
+                        data-ja="スキルと制作実績の紹介">
+                        Personal skills and project showcase
+                    </li>
+
+                    <li data-en="Contact information"
+                        data-ja="連絡先の掲載">
+                        Contact information
+                    </li>
+
+                    <li data-en="English and Japanese language switch"
+                        data-ja="英語と日本語の切り替え">
+                        English and Japanese language switch
+                    </li>
+                </ul>
+            </section>
+
+            <section class="detail-card">
+                <h2 data-en="What I Learned"
+                    data-ja="学んだこと">
+                    What I Learned
+                </h2>
+
+                <p data-en="Through this project, I practiced building web pages, styling layouts with CSS, adding interactive features with JavaScript, and publishing a website online."
+                   data-ja="このプロジェクトを通して、ウェブページの作成、CSSによるデザイン、JavaScriptによる機能の追加、ウェブサイトの公開方法を学びました。">
+                    Through this project, I practiced building web pages, styling layouts with CSS, adding interactive features with JavaScript, and publishing a website online.
+                </p>
+            </section>
+
+        </div>
+
+        <!-- BACK LINK -->
+        <a href="../index.html#projects"
+           class="back-btn"
+           data-en="← Back to Projects"
+           data-ja="← プロジェクト一覧に戻る">
+            ← Back to Projects
+        </a>
+
+        <footer class="project-footer">
+            <span data-en="Designed and developed as a personal project."
+                  data-ja="個人プロジェクトとして制作しました。">
+                Designed and developed as a personal project.
+            </span>
+        </footer>
+
+    </main>
+
+    <!-- LANGUAGE SCRIPT -->
+    <script>
+        function setLanguage(language) {
+            document.documentElement.lang = language;
+
+            document.querySelectorAll("[data-en][data-ja]")
+                .forEach(function(element) {
+                    element.textContent = element.getAttribute(
+                        "data-" + language
+                    );
+                });
+
+            document.getElementById("enButton")
+                .classList.toggle("active", language === "en");
+
+            document.getElementById("jaButton")
+                .classList.toggle("active", language === "ja");
+
+            document.title = language === "ja"
+                ? "ポートフォリオサイト | プロジェクト詳細"
+                : "My Portfolio Website | Project Details";
+        }
+    </script>
 
 
-</a>
 
 
-    <img src="../images/portfolio/Screenshot 2026-09-24 at 21.56.06.png">
 
-    <h2>About the Project</h2>
-    <p>
-      This is my personal portfolio website where I showcase
-      my skills, projects and contact information.
-    </p>
-
-    <h2>Technologies</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-
-    <h2>Features</h2>
-    <ul>
-      <li>Responsive design</li>
-      <li>Project showcase</li>
-      <li>Contact section</li>
-    </ul>
-
-    <a href="../index.html" class="back-btn">← Back to Projects</a>
-
-
+<button id="languageToggle" class="language-toggle" type="button" aria-label="Change website language">🇯🇵 日本語</button>
+<script src="../language.js"></script>
 </body>
 </html>

@@ -1,0 +1,881 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Excel VBA Project | Portfolio</title>
+
+    <meta name="description"
+          content="My first Excel VBA customer management system developed during my internship at Furutani Industries.">
+
+    <style>
+        /* ===== GLOBAL STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         "Noto Sans JP", Arial, sans-serif;
+            background: #0b1120;
+            color: #e2e8f0;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+        /* ===== LANGUAGE BUTTON ===== */
+        .language-toggle {
+            position: fixed;
+            top: 18px;
+            right: 20px;
+            z-index: 9999;
+            padding: 9px 16px;
+            color: #ffffff;
+            background: #1e293b;
+            border: 1px solid #475569;
+            border-radius: 9px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .language-toggle:hover {
+            background: #334155;
+            border-color: #38bdf8;
+            transform: translateY(-2px);
+        }
+
+        /* ===== NAVIGATION ===== */
+        .top-nav {
+            padding: 24px 0;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .back-link {
+            color: #94a3b8;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #38bdf8;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            padding: 90px 0 70px;
+            background:
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(14, 165, 233, 0.12),
+                    transparent 35%
+                );
+        }
+
+        .project-label {
+            display: inline-block;
+            margin-bottom: 22px;
+            padding: 6px 13px;
+            color: #7dd3fc;
+            background: rgba(14, 165, 233, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            max-width: 850px;
+            margin-bottom: 22px;
+            color: #f8fafc;
+            font-size: clamp(36px, 6vw, 62px);
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero-description {
+            max-width: 720px;
+            margin-bottom: 30px;
+            color: #94a3b8;
+            font-size: 17px;
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            padding: 7px 12px;
+            color: #cbd5e1;
+            background: #111c30;
+            border: 1px solid #263449;
+            border-radius: 7px;
+            font-size: 12px;
+        }
+
+        /* ===== GENERAL SECTIONS ===== */
+        .section {
+            padding: 65px 0;
+        }
+
+        .section-heading {
+            margin-bottom: 14px;
+            color: #f8fafc;
+            font-size: clamp(25px, 4vw, 35px);
+            line-height: 1.3;
+        }
+
+        .section-description {
+            max-width: 720px;
+            margin-bottom: 32px;
+            color: #94a3b8;
+        }
+
+        .accent {
+            color: #38bdf8;
+        }
+
+        /* ===== OVERVIEW CARDS ===== */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 32px;
+        }
+
+        .overview-card {
+            padding: 25px;
+            background: #111c30;
+            border: 1px solid #243249;
+            border-radius: 14px;
+            transition: transform 0.3s ease,
+                        border-color 0.3s ease;
+        }
+
+        .overview-card:hover {
+            transform: translateY(-4px);
+            border-color: #38bdf8;
+        }
+
+        .overview-card .card-number {
+            display: block;
+            margin-bottom: 12px;
+            color: #38bdf8;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .overview-card h3 {
+            margin-bottom: 9px;
+            color: #f1f5f9;
+            font-size: 17px;
+        }
+
+        .overview-card p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        /* ===== PROJECT GALLERY ===== */
+        .gallery-section {
+            background: #0e1728;
+            border-top: 1px solid #1e293b;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .gallery-card {
+            overflow: hidden;
+            background: #111c30;
+            border: 1px solid #27364c;
+            border-radius: 14px;
+            transition: transform 0.3s ease,
+                        border-color 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .gallery-card:last-child {
+            grid-column: 1 / -1;
+        }
+
+        .gallery-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 240px;
+            overflow: hidden;
+            background: #080e19;
+        }
+
+        .gallery-card:last-child .gallery-image {
+            min-height: 320px;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            min-height: 240px;
+            max-height: 440px;
+            object-fit: contain;
+            background: #080e19;
+        }
+
+        .gallery-card:last-child .gallery-image img {
+            min-height: 320px;
+        }
+
+        .gallery-content {
+            padding: 23px;
+        }
+
+        .gallery-content h3 {
+            margin-bottom: 8px;
+            color: #f8fafc;
+            font-size: 18px;
+        }
+
+        .gallery-content p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .image-label {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: #38bdf8;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ===== FEATURES ===== */
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            list-style: none;
+        }
+
+        .feature-list li {
+            display: flex;
+            gap: 12px;
+            padding: 19px;
+            background: #111c30;
+            border: 1px solid #243249;
+            border-radius: 10px;
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        .feature-check {
+            flex-shrink: 0;
+            color: #38bdf8;
+            font-weight: 800;
+        }
+
+        /* ===== TECHNOLOGIES ===== */
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tech-item {
+            padding: 11px 17px;
+            color: #bae6fd;
+            background: rgba(14, 165, 233, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-radius: 9px;
+            font-size: 14px;
+        }
+
+        /* ===== LEARNING SECTION ===== */
+        .learning-box {
+            padding: 32px;
+            background: linear-gradient(
+                135deg,
+                rgba(14, 165, 233, 0.10),
+                rgba(30, 41, 59, 0.55)
+            );
+            border: 1px solid #29415c;
+            border-radius: 16px;
+        }
+
+        .learning-box h3 {
+            margin-bottom: 14px;
+            color: #f8fafc;
+            font-size: 21px;
+        }
+
+        .learning-box p {
+            margin-bottom: 12px;
+            color: #cbd5e1;
+        }
+
+        .learning-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 35px 0;
+            border-top: 1px solid #1e293b;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 12px;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        .footer-link {
+            color: #38bdf8;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #7dd3fc;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 760px) {
+            .hero {
+                padding: 75px 0 50px;
+            }
+
+            .overview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-card:last-child {
+                grid-column: auto;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 48px 0;
+            }
+
+            .learning-box {
+                padding: 23px;
+            }
+
+            .language-toggle {
+                top: 12px;
+                right: 12px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- LANGUAGE BUTTON -->
+    <button
+        id="languageToggle"
+        class="language-toggle"
+        type="button"
+        aria-label="Change language">
+        日本語
+    </button>
+
+    <!-- NAVIGATION -->
+    <nav class="top-nav">
+        <div class="container">
+            <a class="back-link"
+               href="../index.html"
+               data-en="← Back to Portfolio"
+               data-ja="← ポートフォリオに戻る">
+                ← Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container">
+
+            <span class="project-label"
+                  data-en="INTERNSHIP PROJECT"
+                  data-ja="インターンシップ制作物">
+                INTERNSHIP PROJECT
+            </span>
+
+            <h1>
+                <span data-en="My First Excel VBA Project"
+                      data-ja="初めてのExcel VBAプロジェクト">
+                    My First Excel VBA Project
+                </span>
+            </h1>
+
+            <p class="hero-description"
+               data-en="A customer management system developed using Microsoft Excel and VBA during my internship at Furutani Industries Co., Ltd. This project was my first hands-on experience with VBA programming."
+               data-ja="フルタニ産業株式会社でのインターンシップ中に、Microsoft ExcelとVBAを使用して顧客管理システムを作成しました。このプロジェクトは、VBAプログラミングに初めて実践的に取り組んだ経験です。">
+                A customer management system developed using Microsoft Excel
+                and VBA during my internship at Furutani Industries Co., Ltd.
+                This project was my first hands-on experience with VBA programming.
+            </p>
+
+            <div class="hero-tags">
+                <span class="tag">Microsoft Excel</span>
+                <span class="tag">Excel VBA</span>
+                <span class="tag"
+                      data-en="Customer Management"
+                      data-ja="顧客管理">
+                    Customer Management
+                </span>
+                <span class="tag"
+                      data-en="Internship"
+                      data-ja="インターンシップ">
+                    Internship
+                </span>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- PROJECT OVERVIEW -->
+        <section class="section">
+            <div class="container">
+
+                <h2 class="section-heading"
+                    data-en="Project Overview"
+                    data-ja="プロジェクト概要">
+                    Project Overview
+                </h2>
+
+                <p class="section-description"
+                   data-en="The goal was to create a simple and practical system for registering and searching customer information in Excel."
+                   data-ja="Excelで顧客情報を登録・検索できる、シンプルで実用的なシステムを作ることが目標でした。">
+                    The goal was to create a simple and practical system
+                    for registering and searching customer information in Excel.
+                </p>
+
+                <div class="overview-grid">
+
+                    <article class="overview-card">
+                        <span class="card-number">01 / PROJECT</span>
+
+                        <h3 data-en="Project Type"
+                            data-ja="プロジェクトの種類">
+                            Project Type
+                        </h3>
+
+                        <p data-en="Practical programming project completed during an internship."
+                           data-ja="インターンシップ中に取り組んだ実践的なプログラミングプロジェクトです。">
+                            Practical programming project completed during an internship.
+                        </p>
+                    </article>
+
+                    <article class="overview-card">
+                        <span class="card-number">02 / COMPANY</span>
+
+                        <h3 data-en="Company"
+                            data-ja="企業名">
+                            Company
+                        </h3>
+
+                        <p data-en="Furutani Industries Co., Ltd. (フルタニ産業株式会社)"
+                           data-ja="フルタニ産業株式会社">
+                            Furutani Industries Co., Ltd.
+                            (フルタニ産業株式会社)
+                        </p>
+                    </article>
+
+                    <article class="overview-card">
+                        <span class="card-number">03 / TECHNOLOGY</span>
+
+                        <h3 data-en="Technology"
+                            data-ja="使用技術">
+                            Technology
+                        </h3>
+
+                        <p data-en="Microsoft Excel, VBA, UserForms and worksheet data management."
+                           data-ja="Microsoft Excel、VBA、UserForm、ワークシートを使用したデータ管理。">
+                            Microsoft Excel, VBA, UserForms and worksheet data management.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT GALLERY -->
+        <section class="section gallery-section">
+            <div class="container">
+
+                <h2 class="section-heading"
+                    data-en="Project Gallery"
+                    data-ja="プロジェクトの画像">
+                    Project Gallery
+                </h2>
+
+                <p class="section-description"
+                   data-en="A closer look at the interface, VBA code and overall customer management system."
+                   data-ja="ユーザーインターフェース、VBAコード、顧客管理システム全体を紹介します。">
+                    A closer look at the interface, VBA code and overall
+                    customer management system.
+                </p>
+
+                <div class="gallery-grid">
+
+                    <!-- IMAGE 1 -->
+                    <article class="gallery-card">
+
+                        <div class="gallery-image">
+                            <img
+                                src="../images/vba/1.jpg"
+                                alt="Excel VBA customer management UserForm and buttons"
+                                loading="lazy">
+                        </div>
+
+                        <div class="gallery-content">
+                            <span class="image-label"
+                                  data-en="01 / USER INTERFACE"
+                                  data-ja="01 / ユーザーインターフェース">
+                                01 / USER INTERFACE
+                            </span>
+
+                            <h3 data-en="Registration and Search Interface"
+                                data-ja="登録・検索画面">
+                                Registration and Search Interface
+                            </h3>
+
+                            <p data-en="The UserForm and buttons used to enter customer information and perform customer searches."
+                               data-ja="顧客情報の入力や検索に使用するUserFormとボタンです。">
+                                The UserForm and buttons used to enter
+                                customer information and perform customer searches.
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <!-- IMAGE 2 -->
+                    <article class="gallery-card">
+
+                        <div class="gallery-image">
+                            <img
+                                src="../images/vba/2.jpg"
+                                alt="Excel VBA code for the customer management system"
+                                loading="lazy">
+                        </div>
+
+                        <div class="gallery-content">
+                            <span class="image-label"
+                                  data-en="02 / VBA CODE"
+                                  data-ja="02 / VBAコード">
+                                02 / VBA CODE
+                            </span>
+
+                            <h3 data-en="VBA Programming"
+                                data-ja="VBAプログラミング">
+                                VBA Programming
+                            </h3>
+
+                            <p data-en="The VBA code used to process customer information, retrieve worksheet data and search by customer number."
+                               data-ja="顧客情報の処理、ワークシートのデータ取得、顧客番号による検索を行うVBAコードです。">
+                                The VBA code used to process customer information,
+                                retrieve worksheet data and search by customer number.
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <!-- IMAGE 3 -->
+                    <article class="gallery-card">
+
+                        <div class="gallery-image">
+                            <img
+                                src="../images/vba/3.png"
+                                alt="Full view of the Excel customer management system"
+                                loading="lazy">
+                        </div>
+
+                        <div class="gallery-content">
+                            <span class="image-label"
+                                  data-en="03 /  SYSTEM"
+                                  data-ja="03 / システム全体">
+                                03 /  SYSTEM
+                            </span>
+
+                            <h3 data-en="Customer Management System"
+                                data-ja="顧客管理システム">
+                                Customer Management System
+                            </h3>
+
+                            <p data-en="An overall view of the Excel workbook and customer management workflow."
+                               data-ja="Excelブックと顧客管理の作業フロー全体を示しています。">
+                                An overall view of the Excel workbook
+                                and customer management workflow.
+                            </p>
+                        </div>
+
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN FEATURES -->
+        <section class="section">
+            <div class="container">
+
+                <h2 class="section-heading"
+                    data-en="Main Features"
+                    data-ja="主な機能">
+                    Main Features
+                </h2>
+
+                <p class="section-description"
+                   data-en="The main functions implemented in this project."
+                   data-ja="このプロジェクトで実装した主な機能です。">
+                    The main functions implemented in this project.
+                </p>
+
+                <ul class="feature-list">
+
+                    
+
+                    <li>
+                        <span class="feature-check">✓</span>
+                        <span data-en="Customer search by customer number"
+                              data-ja="顧客番号による顧客検索">
+                            Customer search by customer number
+                        </span>
+                    </li>
+
+                    <li>
+                        <span class="feature-check">✓</span>
+                        <span data-en="UserForm-based data entry"
+                              data-ja="UserFormを使用したデータ入力">
+                            UserForm-based data entry
+                        </span>
+                    </li>
+
+                    <li>
+                        <span class="feature-check">✓</span>
+                        <span data-en="Customer data stored in an Excel worksheet"
+                              data-ja="Excelワークシートへの顧客データ保存">
+                            Customer data stored in an Excel worksheet
+                        </span>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <!-- TECHNOLOGIES -->
+        <section class="section">
+            <div class="container">
+
+                <h2 class="section-heading"
+                    data-en="Technologies Used"
+                    data-ja="使用した技術">
+                    Technologies Used
+                </h2>
+
+                <p class="section-description"
+                   data-en="Tools and technologies used to build the system."
+                   data-ja="システムの作成に使用したツールと技術です。">
+                    Tools and technologies used to build the system.
+                </p>
+
+                <div class="tech-list">
+                    <span class="tech-item">Microsoft Excel</span>
+                    <span class="tech-item">VBA</span>
+                    <span class="tech-item">UserForms</span>
+                    <span class="tech-item"
+                          data-en="Worksheet Data Management"
+                          data-ja="ワークシートによるデータ管理">
+                        Worksheet Data Management
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- LEARNING EXPERIENCE -->
+        <section class="section">
+            <div class="container">
+
+                <h2 class="section-heading"
+                    data-en="What I Learned"
+                    data-ja="学んだこと">
+                    What I Learned
+                </h2>
+
+                <div class="learning-box">
+
+                    <h3 data-en="My Internship Experience"
+                        data-ja="インターンシップでの経験">
+                        My Internship Experience
+                    </h3>
+
+           
+<p data-en="During my internship at Furutani Industries Co., Ltd., I worked on an Excel VBA-based customer management system. This was my first practical experience in system development and VBA programming."
+   data-ja="フルタニ産業株式会社でのインターンシップでは、Excel VBAを使った顧客管理システムの開発に取り組みました。システム開発とVBAプログラミングの実務を経験したのは初めてでした。">
+    During my internship at Furutani Industries Co., Ltd.,
+    I worked on an Excel VBA-based customer management system.
+    This was my first practical experience in system development
+    and VBA programming.
+</p>
+
+<p data-en="Through this project, I learned how to work with UserForms, manage worksheet data and develop customer search functions. I also learned the importance of understanding requirements, asking questions, working carefully and taking responsibility for completing tasks."
+   data-ja="このプロジェクトを通して、UserFormの使い方、ワークシートのデータ管理、顧客検索機能の開発方法を学びました。また、要件を理解すること、質問すること、丁寧に作業すること、最後まで責任を持って取り組むことの大切さも学びました。">
+    Through this project, I learned how to work with UserForms,
+    manage worksheet data and develop customer search functions.
+    I also learned the importance of understanding requirements,
+    asking questions, working carefully and taking responsibility
+    for completing tasks.
+</p>
+
+<p data-en="This experience helped me understand the role of system engineering in solving business problems through technology and motivated me to further develop my skills in system development and software engineering."
+   data-ja="この経験を通して、技術を活用して業務課題を解決するシステムエンジニアリングの役割を理解し、システム開発とソフトウェアエンジニアリングのスキルをさらに高めたいと思うようになりました。">
+    This experience helped me understand the role of system
+    engineering in solving business problems through technology
+    and motivated me to further develop my skills in system
+    development and software engineering.
+</p>
+
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+
+            <p>
+                © <span id="currentYear"></span>
+                <span data-en="My Portfolio"
+                      data-ja="ポートフォリオ">
+                    My Portfolio
+                </span>
+            </p>
+
+            <a class="footer-link"
+               href="../index.html#projects"
+               data-en="← Back to All Projects"
+               data-ja="← すべてのプロジェクトに戻る">
+                ← Back to All Projects
+            </a>
+
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT: LANGUAGE SWITCH -->
+    <script>
+        const languageToggle = document.getElementById("languageToggle");
+
+        let currentLanguage = "en";
+
+        function setLanguage(language) {
+            currentLanguage = language;
+
+            document.documentElement.lang = language;
+
+            document.querySelectorAll("[data-en][data-ja]").forEach(
+                function (element) {
+                    element.textContent =
+                        element.getAttribute("data-" + language);
+                }
+            );
+
+            languageToggle.textContent =
+                language === "en" ? "日本語" : "English";
+
+            languageToggle.setAttribute(
+                "aria-label",
+                language === "en"
+                    ? "Switch to Japanese"
+                    : "英語に切り替える"
+            );
+        }
+
+        languageToggle.addEventListener("click", function () {
+            const nextLanguage =
+                currentLanguage === "en" ? "ja" : "en";
+
+            setLanguage(nextLanguage);
+        });
+
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
+
+
+
+<button id="languageToggle" class="language-toggle" type="button" aria-label="Change website language">🇯🇵 日本語</button>
+
+<script src="../language.js"></script>

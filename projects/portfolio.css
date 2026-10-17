@@ -1,154 +1,492 @@
+
+/* =========================================
+   PORTFOLIO PROJECT DETAILS
+   Modern Dark Theme + Mint Accent
+========================================= */
+
+:root {
+    --page-bg: #080d19;
+    --card-bg: #111b2f;
+    --card-bg-hover: #17243c;
+    --border: #293750;
+    --text: #f0f5ff;
+    --muted: #b3bfd4;
+    --accent: #70e1cf;
+    --accent-hover: #a0f3e6;
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: #f8fafc;
-  line-height: 1.7;
+    margin: 0;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Noto Sans JP", sans-serif;
+    background:
+        radial-gradient(
+            circle at 10% 0%,
+            rgba(47, 100, 150, 0.18),
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 95% 35%,
+            rgba(92, 66, 153, 0.12),
+            transparent 32%
+        ),
+        var(--page-bg);
+    color: var(--text);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
 }
 
+a {
+    color: inherit;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
 
 .project-details {
-  width: 90%;
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 40px;
-  background: #1e293b;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: min(1000px, 92%);
+    margin: 0 auto;
+    padding: 100px 0 55px;
 }
 
+/* =========================================
+   HEADER
+========================================= */
 
-.project-details h1 {
-  font-size: 42px;
-  color: #38bdf8;
-  margin-bottom: 30px;
+.project-header {
+    margin-bottom: 34px;
 }
 
-
-.project-details img {
-  width: 100%;
-  max-height: 500px;
-  object-fit: cover;
-  border-radius: 15px;
-  margin-bottom: 35px;
+.project-label {
+    display: inline-block;
+    margin-bottom: 17px;
+    padding: 6px 13px;
+    border: 1px solid rgba(112, 225, 207, 0.35);
+    border-radius: 30px;
+    background: rgba(112, 225, 207, 0.08);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
 }
 
-
-.project-details h2 {
-  font-size: 26px;
-  color: #38bdf8;
-  margin-top: 30px;
-  margin-bottom: 12px;
+.project-header h1 {
+    margin: 0 0 16px;
+    max-width: 850px;
+    color: var(--text);
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 800;
+    line-height: 1.22;
+    letter-spacing: -1.3px;
+    overflow-wrap: anywhere;
 }
 
-
-.project-details p {
-  color: #cbd5e1;
-  font-size: 17px;
-  margin-bottom: 20px;
-}
-
-
-.project-details ul {
-  margin-left: 25px;
-  color: #cbd5e1;
-}
-
-.project-details li {
-  margin: 8px 0;
-}
-
-
-.project-details a {
-  display: inline-block;
-  margin-top: 35px;
-  padding: 12px 24px;
-  background: #38bdf8;
-  color: #0f172a;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.project-details a:hover {
-  background: #0ea5e9;
-  color: white;
-  transform: translateY(-2px);
-}
-
-
-@media (max-width: 600px) {
-  .project-details {
-    width: 92%;
-    margin: 30px auto;
-    padding: 25px;
-  }
-
-  .project-details h1 {
-    font-size: 30px;
-  }
-
-  .project-details h2 {
-    font-size: 22px;
-  }
-
-  .project-details p {
+.project-header p {
+    max-width: 680px;
+    margin: 0;
+    color: var(--muted);
     font-size: 15px;
-  }
+    line-height: 1.9;
 }
-.project-buttons {
-  display: flex;
-  gap: 15px;
-  margin: 25px 0 35px;
-  flex-wrap: wrap;
+
+/* =========================================
+   PROJECT BUTTONS
+========================================= */
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 26px;
 }
 
 .project-btn {
-  display: inline-block;
-  padding: 12px 22px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 11px 19px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 750;
+    text-decoration: none;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
+.project-btn:hover {
+    transform: translateY(-3px);
+}
 
 .live-btn {
-  background: #38bdf8;
-  color: #0f172a;
+    border-color: var(--accent);
+    background: var(--accent);
+    color: #07131c;
+    box-shadow: 0 7px 22px rgba(112, 225, 207, 0.12);
 }
 
 .live-btn:hover {
-  background: #0ea5e9;
-  color: #fff;
-  transform: translateY(-3px);
+    border-color: var(--accent-hover);
+    background: var(--accent-hover);
+    box-shadow: 0 10px 28px rgba(112, 225, 207, 0.2);
 }
 
-
 .github-btn {
-  background: #24292e;
-  color: #fff;
+    border-color: #35435e;
+    background: #17233a;
+    color: var(--text);
 }
 
 .github-btn:hover {
-  background: #000;
-  transform: translateY(-3px);
+    border-color: rgba(112, 225, 207, 0.45);
+    background: #202f4a;
 }
 
+/* =========================================
+   PROJECT IMAGE
+========================================= */
 
-@media (max-width: 600px) {
-  .project-buttons {
-    flex-direction: column;
-  }
+.project-image {
+    overflow: hidden;
+    margin: 38px 0 40px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: #111a2c;
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.22);
+    transition: border-color 0.25s ease;
+}
 
-  .project-btn {
-    text-align: center;
+.project-image:hover {
+    border-color: rgba(112, 225, 207, 0.4);
+}
+
+.project-image img {
+    display: block;
     width: 100%;
-  }
+    height: auto;
+    max-height: 560px;
+    object-fit: contain;
+    background: #0b1221;
+}
+
+.image-caption {
+    padding: 13px 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+/* =========================================
+   PROJECT INFORMATION GRID
+========================================= */
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.detail-card {
+    min-width: 0;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    background: linear-gradient(
+        145deg,
+        rgba(21, 33, 54, 0.98),
+        rgba(13, 21, 37, 0.98)
+    );
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(112, 225, 207, 0.35);
+    background: linear-gradient(
+        145deg,
+        #17243c,
+        #101a2d
+    );
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16);
+}
+
+.detail-card h2 {
+    margin: 0 0 14px;
+    color: var(--accent);
+    font-size: 18px;
+    font-weight: 750;
+    line-height: 1.5;
+}
+
+.detail-card p {
+    margin: 0;
+    color: #c4cee0;
+    font-size: 14px;
+    line-height: 1.95;
+    overflow-wrap: anywhere;
+}
+
+.detail-card ul {
+    margin: 0;
+    padding-left: 21px;
+    color: #c4cee0;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.detail-card li {
+    margin: 7px 0;
+    padding-left: 3px;
+}
+
+.detail-card li::marker {
+    color: var(--accent);
+}
+
+/* =========================================
+   TECHNOLOGY TAGS
+========================================= */
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.tech-tags span {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 12px;
+    border: 1px solid rgba(112, 225, 207, 0.22);
+    border-radius: 8px;
+    background: rgba(112, 225, 207, 0.07);
+    color: #e0ebfa;
+    font-size: 12px;
+    font-weight: 650;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.tech-tags span:hover {
+    transform: translateY(-2px);
+    border-color: rgba(112, 225, 207, 0.55);
+    background: rgba(112, 225, 207, 0.14);
+}
+
+/* =========================================
+   BACK TO PROJECTS
+========================================= */
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 11px 16px;
+    border: 1px solid #35435e;
+    border-radius: 9px;
+    background: rgba(21, 33, 54, 0.75);
+    color: #e0e9f8;
+    font-size: 13px;
+    font-weight: 650;
+    text-decoration: none;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.back-btn:hover {
+    transform: translateX(-3px);
+    border-color: rgba(112, 225, 207, 0.45);
+    background: #1b2a43;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.project-footer {
+    margin-top: 36px;
+    padding-top: 21px;
+    border-top: 1px solid var(--border);
+    color: #94a2bb;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* =========================================
+   KEYBOARD ACCESSIBILITY
+========================================= */
+
+.project-btn:focus-visible,
+.back-btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+/* =========================================
+   TABLET & MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+    .project-details {
+        width: min(92%, 560px);
+        padding-top: 95px;
+        padding-bottom: 35px;
+    }
+
+    .project-header h1 {
+        font-size: clamp(29px, 7vw, 38px);
+        letter-spacing: -0.7px;
+    }
+
+    .project-header p {
+        font-size: 14px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .detail-card {
+        padding: 21px;
+    }
+
+    .project-image {
+        margin: 28px 0;
+        border-radius: 13px;
+    }
+
+    .project-actions {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .project-details {
+        width: calc(100% - 28px);
+        padding-top: 88px;
+    }
+
+    .project-header h1 {
+        font-size: 29px;
+    }
+
+    .project-label {
+        font-size: 10px;
+    }
+
+    .project-actions {
+        flex-direction: column;
+    }
+
+    .project-btn {
+        width: 100%;
+    }
+
+    .detail-card {
+        padding: 18px;
+    }
+
+    .detail-card h2 {
+        font-size: 17px;
+    }
+
+    .tech-tags {
+        gap: 7px;
+    }
+
+    .tech-tags span {
+        font-size: 11px;
+    }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* Fix oversized header on project details page */
+
+.project-details > .project-header {
+    display: block;
+    position: static;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    min-height: 0;
+    margin: 0 0 25px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    text-align: left;
+}
+
+.project-details > .project-header h1 {
+    margin: 0 0 12px;
+    padding: 0;
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.25;
+}
+
+.project-details > .project-header p {
+    max-width: 650px;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.project-details > .project-header .project-actions {
+    margin-top: 20px;
+}
+
+@media (max-width: 650px) {
+    .project-details > .project-header h1 {
+        font-size: 29px;
+    }
+
+    .project-details > .project-header p {
+        font-size: 14px;
+    }
 }

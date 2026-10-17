@@ -1,422 +1,1266 @@
-<!DOCTYPE html>
+
+<!DOCTYPE html>ß
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MD SHAHIN MIAH | Personal Website</title>
+    <title>MD SHAHIN MIAH | Personal Website</title>
 
-<link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css">
 
-<body>
+    <style>
+        .language-toggle {
+            position: fixed;
+            top: 14px;
+            right: 14px;
+            z-index: 10000;
+            padding: 8px 12px;
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: 25px;
+            background: linear-gradient(135deg,#2563eb,#7c3aed);
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,.2);
+            transition: .25s;
+        }
+
+        .language-toggle:hover {
+            transform: translateY(-2px);
+        }
+    </style>
 
 
- <header>
+
+
+
+
+<header>
     <nav class="navbar">
         <h2 class="logo">Shahin.</h2>
 
-<ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#Education">Education</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#IT Experience">skills</a></li>
-    <li><a href="#adventure">Adventure</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#comments">Comments</a></li>
-    <li><a href="admin.html">Admin</a></li>
-</ul>
-</nav>
+        <!-- Menu Button -->
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" data-en="Home" data-ja="ホーム">Home</a></li>
+            
+            <li><a href="#about" data-en="About" data-ja="自己紹介">About</a></li>
+            <li><a href="#Education" data-en="Education" data-ja="学歴">Education</a></li>
+            <li><a href="#IT-Experience" data-en="Technical Skills" data-ja="技術スキル">Technical Skills</a></li>
+            <li><a href="#Ai-Vision" data-en="AI Vision" data-ja="AIビジョン">AI Vision</a></li>
+            
+            <li><a href="#projects" data-en="Projects Experience" data-ja="制作実績">Projects</a></li>
+            <li><a href="#smartvixa" data-en="Major Projects" data-ja="主要プロジェクト">Major Projects</a></li>
+            <li><a href="#adventure" data-en="Adventure" data-ja="趣味・冒険">Adventure</a></li>
+            <li><a href="#contact" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
+            <li><a href="#comments" data-en="Comments" data-ja="コメント">Comments</a></li>
+            <li><a href="admin.html" data-en="Admin" data-ja="管理者ページ">Admin</a></li>
+        </ul>
+    </nav>
 </header>
 
 
-
+<!-- HOME -->
 <section id="home" class="hero">
+    <div class="hero-text">
+        <p class="small-title"
+           data-en="WELCOME TO MY WORLD"
+           data-ja="私のポートフォリオへようこそ">
+            WELCOME TO MY WORLD
+        </p>
 
-<div class="hero-text">
-<p class="small-title">WELCOME TO MY WORLD</p>
+        <h1><span>Md Shahin Miah</span></h1>
 
-<h1>
-<span>Md Shahin Miah</span>
-</h1>
+        
 
-<h2>IT Student • Developer • Adventurer</h2>
-
-<p>
-I am an Information System student in Japan.
-I love technology, development,
- programming, mountains,
-camping and exploring the world.
-</p>
+<h2
+    data-en="IT Student • Aspiring Software / Systems / Web Developer • AI Enthusiast • Adventurer"
+    data-ja="IT学生 • ソフトウェア・システム・Web開発者を目指しています • AIに興味があります • 冒険好き">
+    IT Student • Aspiring Software / Systems / Web Developer • AI Enthusiast • Adventurer
+</h2>
 
 
-</div>
-</div>
-<div class="hero-image">
-   <div class="image-circle">
-       <img src="./B3B610D7-9925-4E4B-8AD4-6DA0FED63DC8.PNG" alt="Shahin Miah">
-   </div>
-</div>
 
+        
+<p
+    data-en="I am an Information Systems student in Japan, passionate about technology, software development, system development, web development, and programming. Outside of technology, I enjoy hiking, camping, and exploring the world."
+    data-ja="日本で情報システムを学んでいます。テクノロジー、ソフトウェア開発、システム開発、Web開発、プログラミングに興味があります。IT以外では、登山やキャンプ、世界のさまざまな場所を訪れることが好きです。">
+    I am an Information Systems student in Japan, passionate about
+    technology, software development, system development, web development,
+    and programming. Outside of technology, I enjoy hiking, camping,
+    and exploring the world.
+ </p>
+
+    </div>
+
+    <div class="hero-image">
+        <div class="image-circle">
+            <img src="./B3B610D7-9925-4E4B-8AD4-6DA0FED63DC8.PNG"
+                 alt="Shahin Miah">
+        </div>
+    </div>
 </section>
 
 
-
+<!-- ABOUT -->
 <section id="about" class="section">
-
+    
 <div class="section-title">
-<p>WHO I AM</p>
-<h2>About Me</h2>
+    <p data-en="GET TO KNOW ME" data-ja="私について">
+        GET TO KNOW ME
+    </p>
+
+    <h2 data-en="About Me" data-ja="自己紹介">
+        About Me
+    </h2>
 </div>
 
-<div class="about-content">
 
-<div class="about-text">
-<h3>Technology & Nature</h3>
+    <div class="about-content">
+        <div class="about-text">
+            
+<h3
+    data-en="Technology, Development & Nature"
+    data-ja="テクノロジー・開発・自然">
+    Technology, Development & Nature
+</h3>
 
-<p>
-I am currently studying Information System in Japan.
-I am interested in development, programming
-and IT technology.
+
+            
+<p
+    data-en="I am currently studying Information Systems in Japan. I am learning programming and web development, and I am interested in software development, system development, and AI technologies."
+    data-ja="現在、日本で情報システムを学んでいます。プログラミングやWeb開発を学びながら、ソフトウェア開発、システム開発、AI技術に興味を持っています。">
+    I am currently studying Information Systems in Japan.
+    I am learning programming and web development, and I am interested
+    in software development, system development, and AI technologies.
 </p>
 
-<p>
-Outside technology, I love spending time in nature.
-Hiking, solo camping, mountains and photography
-are a big part of my life.
+
+            
+<p
+    data-en="Outside of technology, I enjoy spending time in nature. Hiking, solo camping, exploring mountains, and photography allow me to discover new places, challenge myself, and gain new experiences."
+    data-ja="IT以外では、自然の中で過ごすことが好きです。登山、ソロキャンプ、山々の探索、写真撮影を通じて、新しい場所を発見し、自分自身に挑戦し、さまざまな経験を積んでいます。">
+    Outside of technology, I enjoy spending time in nature.
+    Hiking, solo camping, exploring mountains, and photography allow me
+    to discover new places, challenge myself, and gain new experiences.
 </p>
 
-<p>
-My goal is to build useful technology while
-continuing to explore the world.
-</p>
-</div>
 
+            
+<p
+    data-en="My goal is to become a software or systems engineer and develop useful software, systems, and AI-powered solutions that make people's lives and work easier. I also want to keep exploring the world and learning new things."
+    data-ja="ソフトウェアエンジニアまたはシステムエンジニアになることが目標です。人々の生活や仕事をより便利にするソフトウェア、システム、AIを活用したソリューションを開発したいと考えています。また、世界を探索しながら、新しいことを学び続けたいです。">
+    My goal is to become a software or systems engineer and develop
+    useful software, systems, and AI-powered solutions that make
+    people's lives and work easier. I also want to keep exploring
+    the world and learning new things.
+</p>
+
+        </div>
+
+        
 <div class="about-card">
-<div>
-<strong>Location</strong>
-<span>Japan 🇯🇵</span>
+
+    <div>
+        <strong data-en="Location" data-ja="所在地">
+            Location
+        </strong>
+        <span data-en="Japan 🇯🇵" data-ja="日本 🇯🇵">
+            Japan 🇯🇵
+        </span>
+    </div>
+
+    <div>
+        <strong data-en="Field of Study" data-ja="専攻分野">
+            Field of Study
+        </strong>
+        <span data-en="Information Systems"
+              data-ja="情報システム">
+            Information Systems
+        </span>
+    </div>
+
+    <div>
+        <strong data-en="Technical Interests" data-ja="技術分野への関心">
+            Technical Interests
+        </strong>
+        <span data-en="Software • Systems • Web • AI"
+              data-ja="ソフトウェア・システム・Web・AI">
+            Software • Systems • Web • AI
+        </span>
+    </div>
+
+    <div>
+        <strong data-en="Career Goal" data-ja="将来の目標">
+            Career Goal
+        </strong>
+        <span data-en="Software / Systems Engineer"
+              data-ja="ソフトウェア・システムエンジニア">
+            Software / Systems Engineer
+        </span>
+    </div>
+
 </div>
 
-<div>
-<strong>Field</strong>
-<span>Information System</span>
-</div>
-
-<div>
-<strong>Interests</strong>
-<span>IT • development• Nature</span>
-</div>
-
-<div>
-<strong>Goal</strong>
-<span>IT Engineer</span>
-</div>
-</div>
-
-</div>
+    </div>
 </section>
 
 
-<section id="Education" class="section  ">
 
+
+
+
+
+<!-- EDUCATION -->
+<section id="Education" class="section">
     <div class="section-title">
-        <p>MY EDUCATION</p>
-        <h2>Educational Journey</h2>
+        <p data-en="MY EDUCATION" data-ja="学歴">MY EDUCATION</p>
+        <h2 data-en="Educational Journey" data-ja="これまでの学び">
+            Educational Journey
+        </h2>
     </div>
 
     <div class="education-main-card">
-
         <div class="education-card-header">
             <span class="education-icon">🎓</span>
-
             <div>
-                <h3>School . College . University</h3>
-                <p>School • College • University</p>
+                <h3 data-en="School • College • University"
+                    data-ja="小学校・高校・大学">
+                    School • College • University
+                </h3>
+                <p data-en="My Academic Background" data-ja="学歴の紹介">
+                    My Academic Background
+                </p>
             </div>
         </div>
 
         <div class="education-list">
-
             <div class="education-item">
                 <span>01</span>
-                <strong>Fordabad South Government Primary School</strong>
+                <strong data-en="Fordabad South Government Primary School"
+                        data-ja="フォルダバード南政府小学校">
+                    Fordabad South Government Primary School
+                </strong>
             </div>
 
             <div class="education-item">
                 <span>02</span>
-                <strong>Fordabad Ideal High School</strong>
+                <strong data-en="Fordabad Ideal High School"
+                        data-ja="フォルダバード・アイデアル高校">
+                    Fordabad Ideal High School
+                </strong>
             </div>
 
             <div class="education-item">
                 <span>03</span>
-                <strong>Fordabad Dr. Rowshan Alam College</strong>
+                <strong data-en="Fordabad Dr. Rowshan Alam College"
+                        data-ja="フォルダバード・ドクター・ロウシャン・アラム・カレッジ">
+                    Fordabad Dr. Rowshan Alam College
+                </strong>
             </div>
 
             <div class="education-item">
                 <span>04</span>
-                <strong>International Futurity Academy</strong>
+                <strong data-en="International Futurity Academy"
+                        data-ja="インターナショナル・フューチャリティ・アカデミー">
+                    International Futurity Academy
+                </strong>
             </div>
 
             <div class="education-item">
                 <span>05</span>
-                <strong>Hagoromo International University</strong>
+                <strong data-en="Hagoromo International University"
+                        data-ja="羽衣国際大学">
+                    Hagoromo International University
+                </strong>
+            </div>
+        </div>
+
+        <p class="education-location"
+           data-en="🇧🇩 Bangladesh → 🇯🇵 Japan"
+           data-ja="🇧🇩 バングラデシュ → 🇯🇵 日本">
+            🇧🇩 Bangladesh → 🇯🇵 Japan
+        </p>
+
+        <a href="subhtml/education.html"
+           class="education-view-btn"
+           data-en="View Details →"
+           data-ja="詳細を見る →">
+            View Details →
+        </a>
+    </div>
+</section>
+
+<!-- LANGUAGES -->
+<section id="languages" class="section">
+    <div class="language-section">
+        <div class="section-title">
+            <h2 data-en="🌐 Languages" data-ja="🌐 使用言語">🌐 Languages</h2>
+        </div>
+
+        <div class="language-card">
+            <div class="language-icon">🇯🇵</div>
+            <div class="language-info">
+                <h3 data-en="Japanese" data-ja="日本語">Japanese</h3>
+                <p>日本語</p>
+            </div>
+            
+        </div>
+
+        <div class="language-card">
+            <div class="language-icon">🇺🇸</div>
+            <div class="language-info">
+                <h3 data-en="English" data-ja="英語">English</h3>
+            </div>
+            
+        </div>
+
+        <div class="language-card">
+            <div class="language-icon">🇧🇩</div>
+            <div class="language-info">
+                <h3 data-en="Bangla" data-ja="ベンガル語">Bangla</h3>
+                <p>বাংলা</p>
+            </div>
+            <div class="language-badges">
+                <span class="badge" data-en="Mother Tongue" data-ja="母語">Mother Tongue</span>
+            </div>
+        </div>
+
+        <div class="language-card">
+            <div class="language-icon">🇮🇳</div>
+            <div class="language-info">
+                <h3 data-en="Hindi" data-ja="ヒンディー語">Hindi</h3>
+                <p>हिन्दी</p>
+            </div>
+           
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- PROJECTS -->
+<section 
+   
+    class="smartvixa-project" id="smartvixa">
+
+    <div class="sv-container">
+
+        <div class="sv-heading">
+            <span class="sv-eyebrow"
+                  data-en="MAJOR PROJECT "
+                  data-ja="主要プロジェクト">MAJOR PROJECT</span>
+
+            <span class="sv-status">
+                <span class="sv-dot"></span>
+                <span data-en="In Development"
+                      data-ja="開発中">In Development</span>
+            </span>
+        </div>
+
+        <div class="sv-hero">
+            <div class="sv-intro">
+                <div class="sv-logo">S<span>V</span></div>
+
+                <h2>SMARTVIXA</h2>
+
+                <h3 data-en="Business Management System"
+                    data-ja="ビジネス管理システム">
+                    Business Management System
+                </h3>
+
+                <p class="sv-description"
+                   data-en="I am currently developing SMARTVIXA, a business management platform designed to help businesses manage their daily operations through one integrated system."
+                   data-ja="現在、企業の日常業務を一つの統合システムで管理できるビジネス管理プラットフォーム、SMARTVIXAを開発しています。">
+                    I am currently developing SMARTVIXA, a business
+                    management platform designed to help businesses
+                    manage their daily operations through one
+                    integrated system.
+                </p>
+
+                <p class="sv-description"
+                   data-en="My goal is to build a flexible, scalable, and AI-powered platform for small businesses, retail shops, wholesalers, and growing companies worldwide."
+                   data-ja="私の目標は、世界中の小規模事業者、小売店、卸売業者、成長企業向けに、柔軟で拡張性があり、AIを活用したプラットフォームを構築することです。">
+                    My goal is to build a flexible, scalable, and
+                    AI-powered platform for small businesses,
+                    retail shops, wholesalers, and growing companies
+                    worldwide.
+                </p>
+
+                <div class="sv-tech">
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>SQLite</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span data-en="AI API — Planned"
+                          data-ja="AI API — 導入予定">AI API — Planned</span>
+                </div>
+            </div>
+
+            <div class="sv-preview">
+                <div class="sv-preview-top">
+                    <div class="sv-preview-brand">
+                        <span class="sv-mini-logo">S</span>
+                        <div>
+                            <strong>SMARTVIXA</strong>
+                            <small data-en="Business Dashboard"
+                                   data-ja="ビジネスダッシュボード">
+                                Business Dashboard
+                            </small>
+                        </div>
+                    </div>
+                    <span class="sv-menu">•••</span>
+                </div>
+
+                <div class="sv-preview-welcome">
+                    <span data-en="BUSINESS OVERVIEW"
+                          data-ja="ビジネス概要">BUSINESS OVERVIEW</span>
+
+                    <h4 data-en="Everything in One Place."
+                        data-ja="すべてを一か所で管理。">
+                        Everything in One Place.
+                    </h4>
+
+                    <p data-en="One platform. Smarter operations."
+                       data-ja="一つのプラットフォームで、より効率的な業務を。">
+                        One platform. Smarter operations.
+                    </p>
+                </div>
+
+                <div class="sv-modules">
+                    <div class="sv-module">
+                        <span>▦</span>
+                        <strong data-en="Inventory"
+                                data-ja="在庫管理">Inventory</strong>
+                        <small data-en="Products & Stock"
+                               data-ja="商品・在庫">Products & Stock</small>
+                    </div>
+
+                    <div class="sv-module">
+                        <span>↗</span>
+                        <strong data-en="Sales"
+                                data-ja="売上管理">Sales</strong>
+                        <small data-en="Transactions"
+                               data-ja="取引履歴">Transactions</small>
+                    </div>
+
+                    <div class="sv-module">
+                        <span>♙</span>
+                        <strong data-en="Employees"
+                                data-ja="従業員管理">Employees</strong>
+                        <small data-en="Roles & Access"
+                               data-ja="役割・アクセス権限">Roles & Access</small>
+                    </div>
+
+                    <div class="sv-module">
+                        <span>▤</span>
+                        <strong data-en="Analytics"
+                                data-ja="データ分析">Analytics</strong>
+                        <small data-en="Reports & Insights"
+                               data-ja="レポート・分析結果">Reports & Insights</small>
+                    </div>
+                </div>
+
+                <div class="sv-ai">
+                    <span class="sv-ai-icon">✳</span>
+                    <div>
+                        <strong data-en="AI Business Assistant"
+                                data-ja="AIビジネスアシスタント">
+                            AI Business Assistant
+                        </strong>
+                        <small data-en="Planned future feature"
+                               data-ja="将来実装予定の機能">
+                            Planned future feature
+                        </small>
+                    </div>
+                    <span class="sv-ai-arrow">↗</span>
+                </div>
+
+                <div class="sv-preview-footer"
+                     data-en="CONCEPT PREVIEW · DEVELOPMENT IN PROGRESS"
+                     data-ja="コンセプトプレビュー · 開発進行中">
+                    CONCEPT PREVIEW · DEVELOPMENT IN PROGRESS
+                </div>
+            </div>
+        </div>
+
+        <div class="sv-divider"></div>
+
+        <div class="sv-content-grid">
+
+            <article class="sv-content-card">
+                <span class="sv-card-icon">01</span>
+
+                <h4 data-en="Core Features"
+                    data-ja="主な機能">Core Features</h4>
+
+                <ul>
+                    <li data-en="Business & Branch Management"
+                        data-ja="企業・支店管理">Business & Branch Management</li>
+                    <li data-en="Product & Inventory Management"
+                        data-ja="商品・在庫管理">Product & Inventory Management</li>
+                    <li data-en="Sales & Transaction History"
+                        data-ja="売上・取引履歴">Sales & Transaction History</li>
+                    <li data-en="Employee Roles & Permissions"
+                        data-ja="従業員の役割・権限管理">Employee Roles & Permissions</li>
+                    <li data-en="Reports & Business Analytics"
+                        data-ja="レポート・ビジネス分析">Reports & Business Analytics</li>
+                    <li data-en="AI Business Assistant (Planned)"
+                        data-ja="AIビジネスアシスタント（導入予定）">
+                        AI Business Assistant (Planned)
+                    </li>
+                </ul>
+            </article>
+
+            <article class="sv-content-card">
+                <span class="sv-card-icon">02</span>
+
+                <h4 data-en="Current Development"
+                    data-ja="現在の開発状況">Current Development</h4>
+
+                <p data-en="SMARTVIXA is an ongoing major project. I am developing the core system step by step, focusing on application architecture, backend development, database design, functionality, and testing."
+                   data-ja="SMARTVIXAは現在開発中の主要プロジェクトです。アプリケーションの設計、バックエンド開発、データベース設計、機能の実装、テストに重点を置き、段階的にシステムの中核部分を開発しています。">
+                    SMARTVIXA is an ongoing major project.
+                    I am developing the core system step by step,
+                    focusing on application architecture, backend
+                    development, database design, functionality,
+                    and testing.
+                </p>
+            </article>
+
+            <article class="sv-content-card">
+                <span class="sv-card-icon">03</span>
+
+                <h4 data-en="Future Development"
+                    data-ja="今後の開発計画">Future Development</h4>
+
+                <p data-en="My long-term vision is to expand SMARTVIXA into an online business platform with AI-powered assistance, multi-branch support, advanced analytics, mobile access, and additional business tools."
+                   data-ja="将来的には、AIによる支援、複数支店への対応、高度な分析機能、モバイルからのアクセス、追加のビジネスツールを備えたオンラインビジネスプラットフォームへとSMARTVIXAを発展させることを目指しています。">
+                    My long-term vision is to expand SMARTVIXA into
+                    an online business platform with AI-powered
+                    assistance, multi-branch support, advanced
+                    analytics, mobile access, and additional
+                    business tools.
+                </p>
+            </article>
+
+        </div>
+
+        <div class="sv-bottom">
+
+            <div class="sv-bottom-info">
+                <span class="sv-eyebrow"
+                      data-en="MY ROLE"
+                      data-ja="担当分野">MY ROLE</span>
+
+                <p data-en="Project Concept · System Architecture · Development · Database Design · Testing"
+                   data-ja="プロジェクト企画 · システム設計 · 開発 · データベース設計 · テスト">
+                    Project Concept · System Architecture · Development
+                    · Database Design · Testing
+                </p>
+            </div>
+
+            <div class="sv-project-status">
+                <span class="sv-status-label"
+                      data-en="PROJECT STATUS"
+                      data-ja="プロジェクトの状況">PROJECT STATUS</span>
+
+                <strong data-en="In Development"
+                        data-ja="開発中">In Development</strong>
+
+                <small data-en="Future Expansion Planned"
+                       data-ja="今後の機能拡張を予定">
+                    Future Expansion Planned
+                </small>
             </div>
 
         </div>
 
-        <p class="education-location">🇧🇩 Bangladesh → 🇯🇵 Japan</p>
+        <div class="sv-action">
+            <p data-en="Building today, improving continuously, and expanding for the future."
+               data-ja="今開発し、継続的に改善し、将来に向けて発展させていきます。">
+                Building today, improving continuously,
+                and expanding for the future.
+            </p>
 
-        <a href="subhtml/education.html" class="education-view-btn">
-            View Details →
-        </a>
+            <a href="smartvixa-details.html" class="sv-view-btn">
+                <span data-en="View Project"
+                      data-ja="プロジェクトを見る">View Project</span>
+                <span>↗</span>
+            </a>
+        </div>
 
     </div>
-
-</section>
-
-
-<div id="IT Experience" class="section dark-section">
-
-<div class="section-title">
-<p>WHAT I KNOW</p>
-<h2>My Skills </h2>
-</div>
-
-<div class="skills-container">
-
-
-
-<div class="skill-card">
-    <h3>Firebase</h3>
-    <p>
-        Experience with Firebase Authentication, Realtime Database,
-        backend services, and secure data management for web applications.
-    </p>
-</div>
-
-
-<div class="skill-card">
-    <h3> Unity & Unity Hub</h3>
-    <p>Experience using Unity and Unity Hub for game development, programming, project management, and asset integration. <p>
-
-</div>
-
-<div class="skill-card">
-<h3>VBA=visual Basic for Applications</h3>
-<p>VBA is a programming language used to develop systems and automate tasks in Microsoft Office applications such as Excel, Word, and Access.</p>
-</div>
-
-<div class="skill-card">
-<h3>HTML</h3>
-<p>Building the structure of modern websites.</p>
-</div>
-
-<div class="skill-card">
-<h3>CSS</h3>
-<p>Creating responsive and beautiful designs.</p>
-</div>
-
-<div class="skill-card">
-<h3>Python</h3>
-<p>Programming and solving problems with Python.</p>
-</div>
-
-<div class="skill-card">
-<h3>VS Code</h3>
-<p> A powerful code editor for web development. 
-    I use it to write, edit, organize, and manage my code efficiently while building websites and web applications.</p>
-</div>
-
-<div class="skill-card">
-    <h3>Blender</h3>
-    <p>3D modeling, rendering and creative design.</p>
-</div>
-
-<div class="skill-card">
-    <h3> Microsoft Excel</h3>
-    <p>System and data analysis for business operations and development. </p>
-</div>
-
-<div class="skill-card">
-    <h3>Adobe Illustrator</h3>
-<p>Creating high-quality vector graphics, logos, and illustrations for various digital and print media.</p>
-</div>
-
-<div class="skill-card">
-<h3>Git & GitHub</h3>
-<p>Managing and sharing programming projects.</p>
-</div>
-
-</div>
-
-</section>
-
-
-
-<section id="adventure" class="section">
-
-<div class="section-title">
-<p>BEYOND THE SCREEN</p>
-<h2>My Adventures</h2>
-</div>
-
-<div class="adventure-grid">
-
-<div class="adventure-card">
-<div class="adventure-image mountain">
-<span>🏔️</span>
-<a href="#" class="btn">View More</a>
-</div>
-
-<div class="adventure-info">
-<h3>Mountain Hiking</h3>
-<p>
-Exploring Japanese mountains and
-discovering places far from the city.
-</p>
-</div>
-</div>
-
-
-<div class="adventure-card">
-<div class="adventure-image camping">
-<span>🏕️</span>
-<a href="#" class="btn">View More</a>
-</div>
-
-<div class="adventure-info">
-<h3>Solo Camping</h3>
-<p>
-Camping in nature and enjoying
-freedom away from everyday life.
-</p>
-</div>
-</div>
-
-
-<div class="adventure-card">
-<div class="adventure-image travel">
-<span>🌏</span>
-<a href="#" class="btn">View More</a>
-</div>
-
-<div class="adventure-info">
-<h3>Travel</h3>
-<p>
-Exploring new places, cultures
-and unforgettable experiences.
-</p>
-</div>
-</div>
-
-</div>
-
 </section>
 
 
 
 <section id="projects" class="section dark-section">
+    <div class="section-title">
+        <p data-en="MY WORK" data-ja="制作実績">MY WORK</p>
+        <h2 data-en="MY PROJECT EXPERIENCE" data-ja="私のプロジェクト経験">Projects</h2>
+    </div>
 
+    <div class="projects-container">
+       
+<div class="project-card"
+     onclick="window.location.href='projects/portfolio.html'"
+     style="cursor: pointer;">
+
+    <span class="project-number">01</span>
+    <h3 data-en="Personal Website" data-ja="個人ポートフォリオサイト">
+        Personal Website
+    </h3>
+    <p data-en="A responsive personal portfolio website built with HTML, JavaScript, and CSS."
+       data-ja="HTML、JavaScript、CSSを使用して制作した、レスポンシブ対応の個人ポートフォリオサイトです。">
+        A responsive personal portfolio website built with HTML, JavaScript, and CSS.
+    </p>
+    <a href="projects/portfolio.html"
+       onclick="event.stopPropagation()"
+       data-en="View Project →" data-ja="制作物を見る →">
+        View Project →
+    </a>
+</div>
+
+
+ <!----       
+<div class="project-card"
+     onclick="window.location.href='projects/python.html'"
+     style="cursor: pointer;">
+
+    <span class="project-number">02</span>
+    <h3 data-en="Python Project" data-ja="Pythonプロジェクト">
+        Python Project
+    </h3>
+    <p data-en="A programming project created while learning Python."
+       data-ja="Pythonの学習中に制作したプログラミングプロジェクトです。">
+        A programming project created while learning Python.
+    </p>
+    <a href="projects/python.html"
+       onclick="event.stopPropagation()"
+       data-en="View Project →" data-ja="制作物を見る →">
+        View Project →
+    </a>
+</div> 
+--->
+
+
+        
+<div class="project-card"
+     onclick="window.location.href='projects/blender.html'"
+     style="cursor: pointer;">
+
+    <span class="project-number">03</span>
+    <h3 data-en="Blender Project" data-ja="Blenderプロジェクト">
+        Blender Project
+    </h3>
+    <p data-en="A 3D model created with Blender using skills learned in university classes."
+       data-ja="大学の授業で学んだ知識や技術を活用して、Blenderで3Dモデルを制作しています。">
+        A 3D model created with Blender using skills learned in university classes.
+    </p>
+    <a href="projects/blender.html"
+       onclick="event.stopPropagation()"
+       data-en="View Project →" data-ja="制作物を見る →">
+        View Project →
+    </a>
+</div>
+
+
+    
+
+
+<div class="project-card"
+     onclick="window.location.href='./projects/vba.html'"
+     style="cursor: pointer;">
+
+    <span class="project-number">04</span>
+
+    <h3 data-en="Excel VBA Project"
+        data-ja="Excel VBAプロジェクト">
+        My First Excel VBA Project
+    </h3>
+
+    <p data-en="During my internship at Furutani Industries, I wrote Excel VBA code for the first time and developed a customer management system. I implemented customer registration and search features using Excel worksheets and UserForms, gaining hands-on experience in programming and problem-solving."
+       data-ja="フルタニ産業株式会社のインターンシップで、初めてExcel VBAのコーディングに挑戦し、顧客管理システムを開発しました。ExcelシートとUserFormを使って顧客登録・検索機能を実装し、プログラミングと問題解決の実践的な経験を得ました。">
+        During my internship at Furutani Industries, I wrote Excel VBA code for the first time and developed a customer management system. I implemented customer registration and search features using Excel worksheets and UserForms, gaining hands-on experience in programming and problem-solving.
+    </p>
+
+    <a href="./projects/vba.html"
+       onclick="event.stopPropagation()"
+       data-en="View Project →"
+       data-ja="制作物を見る →">
+        Internship Project →
+    </a>
+
+</div>
+
+
+
+    </div>
+
+
+</section>
+<!-- SKILLS -->
+<section id="IT-Experience" class="section dark-section">
+    
 <div class="section-title">
-<p>MY WORK</p>
-<h2>Projects</h2>
-</div>
-
-<div class="projects-container">
-
-<div class="project-card">
-<span class="project-number">01</span>
-
-<h3>Personal Website</h3>
-
-<p>
-  A responsive personal portfolio website
-  created using HTML, javascript and CSS.
+    <p data-en="TECHNICAL EXPERTISE"
+   data-ja="技術スキル">
+    TECHNICAL EXPERTISE
 </p>
 
-<a href="projects/portfolio.html">View Project →</a>
-
-<link rel="stylesheet" href="#">
+<h2 data-en="My Technical Skills & Learning"
+    data-ja="学んだ技術・学習中の技術">
+    My Technical Skills & Learning
+</h2>
 </div>
 
-<div class="project-card">
-<span class="project-number">02</span>
 
-<h3>Python Project</h3>
+    <div class="skills-container">
+        <div class="skill-card">
+            <h3>Firebase</h3>
+            <p data-en="I am learning Firebase Authentication, Realtime Database, backend services, and data management for web applications."
+               data-ja="Firebase Authentication、Realtime Database、バックエンド機能、Webアプリケーションのデータ管理について学んでいます。">
+                I am learning Firebase Authentication, Realtime Database,
+                backend services, and data management for web applications.
+            </p>
+        </div>
 
-<p>
-A programming project created while
-studying Python.
-</p>
+        <div class="skill-card">
+            <h3>Unity & Unity Hub</h3>
+            <p data-en="I am learning game development, programming, project management, and asset integration using Unity and Unity Hub."
+               data-ja="UnityとUnity Hubを使用したゲーム開発、プログラミング、プロジェクト管理、アセットの活用について学んでいます。">
+                I am learning game development, programming, project management,
+                and asset integration using Unity and Unity Hub.
+            </p>
+        </div>
 
-<a href="#">View Project →</a>
+      <!--  
+         <div class="skill-card">
+            <h3>Visual Basic for Applications</h3>
+            <p data-en="VBA is used to automate tasks and develop systems in Microsoft Office applications such as Excel, Word, and Access."
+               data-ja="VBAは、Excel、Word、AccessなどのMicrosoft Officeアプリケーションで、業務の自動化やシステム開発に使用されます。">
+                VBA is used to automate tasks and develop systems
+                in Microsoft Office applications such as Excel, Word, and Access.
+            </p>
+        </div>
+        --> 
+
+        <div class="skill-card">
+            <h3>HTML</h3>
+            <p data-en="Learning to build the structure of websites."
+               data-ja="Webサイトの基本構造を作成する技術を学んでいます。">
+                Learning to build the structure of websites.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>CSS</h3>
+            <p data-en="Learning to create responsive and attractive website designs."
+               data-ja="見やすく魅力的で、さまざまな画面に対応したWebデザインを学んでいます。">
+                Learning to create responsive and attractive website designs.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Python</h3>
+            <p data-en="Learning programming fundamentals and problem-solving with Python."
+               data-ja="Pythonを使ったプログラミングの基礎と問題解決について学んでいます。">
+                Learning programming fundamentals and problem-solving with Python.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>VS Code</h3>
+            <p data-en="I use VS Code to write, edit, organize, and manage code while building websites and web applications."
+               data-ja="WebサイトやWebアプリケーションの開発で、コードの作成、編集、整理、管理にVS Codeを使用しています。">
+                I use VS Code to write, edit, organize, and manage code
+                while building websites and web applications.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Blender</h3>
+            <p data-en="Learning 3D modeling, rendering, and creative design."
+               data-ja="3Dモデリング、レンダリング、デザイン制作について学んでいます。">
+                Learning 3D modeling, rendering, and creative design.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Microsoft Excel</h3>
+            <p data-en="Using Excel for data organization, analysis, and business operations."
+               data-ja="データの整理・分析や業務管理にExcelを活用しています。">
+                Using Excel for data organization, analysis, and business operations.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Adobe Illustrator</h3>
+            <p data-en="Learning to create vector graphics, logos, and illustrations for digital and print media."
+               data-ja="デジタル媒体や印刷物向けのロゴ、イラスト、ベクター画像の制作を学んでいます。">
+                Learning to create vector graphics, logos, and illustrations
+                for digital and print media.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Git & GitHub</h3>
+            <p data-en="Learning to manage, track, and share programming projects."
+               data-ja="プログラミングプロジェクトの管理、変更履歴の記録、共有について学んでいます。">
+                Learning to manage, track, and share programming projects.
+            </p>
+        </div>
+        <!-- Flask -->
+<div class="skill-card">
+    <h3>Flask</h3>
+    <p data-en="Learning to build web applications and backend services using Python and Flask."
+       data-ja="PythonとFlaskを使用したWebアプリケーションやバックエンドサービスの開発を学んでいます。">
+        Learning to build web applications and backend services using Python and Flask.
+    </p>
 </div>
 
-<div class="project-card">
-<span class="project-number">03</span>
-
-<h3>Blender project</h3>
-<p>Creating a 3D model from scratch using Blender,applying the skills i learned from my university teacher </p>
-<a href="projects/blender.html">view project</a>
+<!-- SQLite/MySQL -->
+<div class="skill-card">
+    <h3>SQLite/MySQL</h3>
+    <p data-en="Learning to store, organize, and manage application data using SQLite and MySQL databases."
+       data-ja="SQLiteとMySQLデータベースを使用したアプリケーションデータの保存、整理、管理について学んでいます。">
+        Learning to store, organize, and manage application data using SQLite and MySQL databases.
+    </p>
 </div>
 
-<div class="project-card">
-<span class="project-number">04</span>
-
-<h3>Future Project</h3>
-
-<p>
-Something new I will build in the future.
-</p>
-
-<a href="#">Coming Soon →</a>
+<!-- AI-Assisted Development -->
+<div class="skill-card">
+    <h3>AI-Assisted Development</h3>
+    <p data-en="Exploring AI tools to understand code, troubleshoot errors, and support software development."
+       data-ja="AIツールを活用して、コードの理解、エラーの解決、ソフトウェア開発をサポートする方法を学んでいます。">
+        Exploring AI tools to understand code, troubleshoot errors, and support software development.
+    </p>
 </div>
+    </div>
+  
 
-</div>
+
+</section>
+<!-- MY AI ECOSYSTEM SECTION -->
+<section class="Ai-Vision" id="Ai-Vision">
+
+    <div class="my-ai-container">
+
+        <!-- SECTION HEADING -->
+        <div class="my-ai-heading">
+
+            <span class="my-ai-label"
+                  data-en="MY AI VISION"
+                  data-ja="私のAIビジョン">
+                MY AI VISION
+            </span>
+
+            <h2 data-en="One AI. Every App. Every System."
+                data-ja="一つのAIを、すべてのアプリとシステムへ。">
+                One AI. <span>Every App.</span><br>
+                Every System.
+            </h2>
+
+            <p
+                data-en="My vision is to build my own AI assistant and gradually develop my own AI models. I want to integrate my AI into every application and system I create, building one connected AI ecosystem that grows with my ideas."
+                data-ja="私のビジョンは、自分専用のAIアシスタントを開発し、将来的には独自のAIモデルを開発することです。自分が作るすべてのアプリやシステムにAIを組み込み、アイデアとともに成長するAIエコシステムを構築したいと考えています。">
+                My vision is to build my own AI assistant and gradually
+                develop my own AI models. I want to integrate my AI into
+                every application and system I create, building one
+                connected AI ecosystem that grows with my ideas.
+            </p>
+
+        </div>
+
+        <!-- AI CORE VISUAL -->
+        <div class="my-ai-core">
+
+            <div class="my-ai-orbit orbit-one"></div>
+            <div class="my-ai-orbit orbit-two"></div>
+            <div class="my-ai-orbit orbit-three"></div>
+
+            <div class="my-ai-core-circle">
+                <span class="my-ai-symbol">✳</span>
+
+                <h3 data-en="MY AI ASSISTANT"
+                    data-ja="私のAIアシスタント">
+                    MY AI ASSISTANT
+                </h3>
+
+                <p data-en="One intelligence. Multiple systems."
+                   data-ja="一つの知能で、複数のシステムを支援。">
+                    One intelligence. Multiple systems.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- MY AI GOALS -->
+        <div class="my-ai-goals">
+
+            <article class="my-ai-card">
+
+                <div class="my-ai-card-top">
+                    <span class="my-ai-number">01</span>
+                    <span class="my-ai-card-icon">⌘</span>
+                </div>
+
+                <h3 data-en="Build My AI Assistant"
+                    data-ja="自分専用のAIアシスタントを開発">
+                    Build My AI Assistant
+                </h3>
+
+                <p
+                    data-en="Create an AI assistant that helps me write code, understand errors, solve problems, and develop software."
+                    data-ja="コード作成、エラーの理解、問題解決、ソフトウェア開発を支援するAIアシスタントを作ります。">
+                    Create an AI assistant that helps me write code,
+                    understand errors, solve problems, and develop software.
+                </p>
+
+                <span class="my-ai-tag"
+                      data-en="AI ASSISTANT"
+                      data-ja="AIアシスタント">
+                    AI ASSISTANT
+                </span>
+
+            </article>
+
+            <article class="my-ai-card">
+
+                <div class="my-ai-card-top">
+                    <span class="my-ai-number">02</span>
+                    <span class="my-ai-card-icon">↗</span>
+                </div>
+
+                <h3 data-en="Connect Every Application"
+                    data-ja="すべてのアプリと連携">
+                    Connect Every Application
+                </h3>
+
+                <p
+                    data-en="Integrate my AI into SMARTVIXA, websites, mobile apps, and every new application I develop through suitable APIs and secure connections."
+                    data-ja="適切なAPIと安全な接続を通じて、SMARTVIXA、Webサイト、モバイルアプリ、今後開発するアプリにAIを組み込みます。">
+                    Integrate my AI into SMARTVIXA, websites, mobile apps,
+                    and every new application I develop through suitable
+                    APIs and secure connections.
+                </p>
+
+                <span class="my-ai-tag"
+                      data-en="APP INTEGRATION"
+                      data-ja="アプリ連携">
+                    APP INTEGRATION
+                </span>
+
+            </article>
+
+            <article class="my-ai-card">
+
+                <div class="my-ai-card-top">
+                    <span class="my-ai-number">03</span>
+                    <span class="my-ai-card-icon">⚙</span>
+                </div>
+
+                <h3 data-en="Develop My Own AI Models"
+                    data-ja="独自のAIモデルを開発">
+                    Develop My Own AI Models
+                </h3>
+
+                <p
+                    data-en="Start with existing AI models, learn AI engineering, and gradually explore customizing and developing my own models for future projects."
+                    data-ja="既存のAIモデルから始め、AIエンジニアリングを学びながら、将来的には独自モデルのカスタマイズと開発を目指します。">
+                    Start with existing AI models, learn AI engineering,
+                    and gradually explore customizing and developing my
+                    own models for future projects.
+                </p>
+
+                <span class="my-ai-tag"
+                      data-en="FUTURE RESEARCH"
+                      data-ja="将来の研究">
+                    FUTURE RESEARCH
+                </span>
+
+            </article>
+
+        </div>
+
+        <!-- CONNECTED ECOSYSTEM -->
+        <div class="my-ai-ecosystem">
+
+            <div class="my-ai-ecosystem-heading">
+
+                <span data-en="MY FUTURE ECOSYSTEM"
+                      data-ja="私の将来のエコシステム">
+                    MY FUTURE ECOSYSTEM
+                </span>
+
+                <h3 data-en="One AI at the Center of My Digital World"
+                    data-ja="デジタル環境の中心に一つのAIを">
+                    One AI at the Center of My Digital World
+                </h3>
+
+                <p
+                    data-en="A long-term plan to connect my applications and systems through a shared AI platform, with appropriate permissions and security."
+                    data-ja="適切な権限管理とセキュリティを備えた共通のAIプラットフォームを通じて、自分のアプリやシステムを連携させる長期的な計画です。">
+                    A long-term plan to connect my applications and
+                    systems through a shared AI platform, with
+                    appropriate permissions and security.
+                </p>
+
+            </div>
+
+            <div class="my-ai-platforms">
+
+                <div class="my-ai-platform">
+                    <span>01</span>
+                    <div class="platform-icon">▣</div>
+
+                    <h4 data-en="SMARTVIXA"
+                        data-ja="SMARTVIXA">
+                        SMARTVIXA
+                    </h4>
+
+                    <p data-en="Business Management"
+                       data-ja="ビジネス管理">
+                        Business Management
+                    </p>
+                </div>
+
+                <div class="my-ai-platform">
+                    <span>02</span>
+                    <div class="platform-icon">⌘</div>
+
+                    <h4 data-en="Web Applications"
+                        data-ja="Webアプリケーション">
+                        Web Applications
+                    </h4>
+
+                    <p data-en="Websites & Tools"
+                       data-ja="Webサイトとツール">
+                        Websites & Tools
+                    </p>
+                </div>
+
+                <div class="my-ai-platform">
+                    <span>03</span>
+                    <div class="platform-icon">▱</div>
+
+                    <h4 data-en="Mobile Apps"
+                        data-ja="モバイルアプリ">
+                        Mobile Apps
+                    </h4>
+
+                    <p data-en="Mobile Experiences"
+                       data-ja="モバイル向け機能">
+                        Mobile Experiences
+                    </p>
+                </div>
+
+                <div class="my-ai-platform">
+                    <span>04</span>
+                    <div class="platform-icon">⌁</div>
+
+                    <h4 data-en="Future Systems"
+                        data-ja="将来のシステム">
+                        Future Systems
+                    </h4>
+
+                    <p data-en="New Ideas & Solutions"
+                       data-ja="新しいアイデアとソリューション">
+                        New Ideas & Solutions
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="my-ai-footer">
+                <span>MY AI</span>
+                <i></i>
+                <span>MY APPLICATIONS</span>
+                <i></i>
+                <span>MY SYSTEMS</span>
+                <i></i>
+                <span>MY FUTURE</span>
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<section id="comments" class="section ">
 
+<!-- ADVENTURES -->
+<section id="adventure" class="section">
+    <div class="section-title">
+        <p data-en="BEYOND THE SCREEN" data-ja="IT以外の楽しみ">
+            BEYOND THE SCREEN
+        </p>
+        <h2 data-en="My Adventures" data-ja="趣味・冒険">My Adventures</h2>
+    </div>
 
- <h1> 📝 Any Comment for SHAHIN? Please Submit Below 📝</h1>
+    <div class="adventure-grid">
+        <div class="adventure-card">
+            <div class="adventure-image mountain">
+                <span>🏔️</span>
+                <a href="#adventure" class="btn"
+                   data-en="Explore" data-ja="詳しく見る">Explore</a>
+            </div>
+            <div class="adventure-info">
+                <h3 data-en="Mountain Hiking" data-ja="登山">Mountain Hiking</h3>
+                <p data-en="I enjoy exploring Japanese mountains and discovering places away from busy cities."
+                   data-ja="日本の山々を歩き、街の喧騒から離れた自然豊かな場所を探索することが好きです。">
+                    I enjoy exploring Japanese mountains and discovering places away from busy cities.
+                </p>
+            </div>
+        </div>
 
-<form id="commentForm">
+        <div class="adventure-card">
+            <div class="adventure-image camping">
+                <span>🏕️</span>
+                <a href="#adventure" class="btn"
+                   data-en="Explore" data-ja="詳しく見る">Explore</a>
+            </div>
+            <div class="adventure-info">
+                <h3 data-en="Solo Camping" data-ja="ソロキャンプ">Solo Camping</h3>
+                <p data-en="I enjoy camping in nature and spending peaceful time away from everyday life."
+                   data-ja="自然の中でキャンプをし、日常から離れてゆっくり過ごす時間を楽しんでいます。">
+                    I enjoy camping in nature and spending peaceful time away from everyday life.
+                </p>
+            </div>
+        </div>
 
-  <input
-    type="email"
-    id="email"
-    placeholder="Your Email"
-    required
-  >
+        <div class="adventure-card">
+            <div class="adventure-image travel">
+                <span>🌏</span>
+                <a href="#adventure" class="btn"
+                   data-en="Explore" data-ja="詳しく見る">Explore</a>
+            </div>
+            <div class="adventure-info">
+                <h3 data-en="Travel" data-ja="旅行">Travel</h3>
+                <p data-en="I enjoy discovering new places, experiencing different cultures, and making memorable experiences."
+                   data-ja="新しい場所を訪れ、さまざまな文化に触れ、思い出に残る体験をすることが好きです。">
+                    I enjoy discovering new places, experiencing different cultures,
+                    and making memorable experiences.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-  <textarea
-    id="comment"
-    placeholder="Your Comment"
-  ></textarea>
+<!-- COMMENTS -->
+<section id="comments" class="section">
+    <h1 data-en="📝 Have a Comment for Shahin? Please Submit Below 📝"
+        data-ja="📝 ご意見・ご感想をぜひお寄せください 📝">
+        📝 Have a Comment for Shahin? Please Submit Below 📝
+    </h1>
 
-  <button type="submit">Submit</button>
+    <form id="commentForm">
+        <input
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            data-placeholder-en="Your Email"
+            data-placeholder-ja="メールアドレス"
+            required
+        >
 
-</form>
+        <textarea
+            id="comment"
+            placeholder="Your Comment"
+            data-placeholder-en="Your Comment"
+            data-placeholder-ja="コメントを入力してください"
+        ></textarea>
 
-<p id="message"></p>
+        <button type="submit" data-en="Submit" data-ja="送信">
+            Submit
+        </button>
+    </form>
 
+    <p id="message"
+       data-en-success="Thank you! Your comment has been submitted."
+       data-ja-success="ありがとうございます。コメントを送信しました。"
+       data-en-error="Something went wrong. Please try again."
+       data-ja-error="送信に失敗しました。もう一度お試しください。">
+    </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+    <div class="section-title">
+        <p data-en="GET IN TOUCH" data-ja="お問い合わせ">
+            GET IN TOUCH
+        </p>
+        <h2 data-en="Contact Me" data-ja="お問い合わせ">
+            Contact Me
+        </h2>
+    </div>
+
+    <p class="contact-text"
+       data-en="Interested in my work or want to connect? Feel free to contact me."
+       data-ja="私の活動に興味をお持ちの方や、交流をご希望の方は、お気軽にご連絡ください。">
+        Interested in my work or want to connect?
+        Feel free to contact me.
+    </p>
+
+    <div class="contact-links">
+        <a href="mailto:safayedsahin@gmail.com"
+           data-en="📧 Email" data-ja="📧 メール">📧 Email</a>
+
+        <a href="https://www.instagram.com/safayedsahin_"
+           target="_blank" rel="noopener noreferrer"
+           data-en="📷 Instagram" data-ja="📷 Instagram">📷 Instagram</a>
+
+        <a href="https://github.com/SafayedShahin"
+           target="_blank" rel="noopener noreferrer"
+           data-en="💻 GitHub" data-ja="💻 GitHub">💻 GitHub</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h3>Md Shahin Miah</h3>
+
+    <p data-en="Technology • Adventure • Freedom"
+       data-ja="テクノロジー・冒険・自由">
+        Technology • Adventure • Freedom
+    </p>
+
+    <p class="copyright"
+       data-en="© 2026 Shahin Miah. All Rights Reserved."
+       data-ja="© 2026 Shahin Miah. All Rights Reserved.">
+        © 2026 Shahin Miah. All Rights Reserved.
+    </p>
+</footer>
+
+<!-- FIREBASE COMMENTS -->
 <script type="module">
-
-  import { initializeApp }
+import { initializeApp }
     from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 
-  import {
+import {
     getDatabase,
     ref,
     push
-  } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
+} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
 
-
-  const firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyDh4DdnD-gmk9QJjX97rBcaiz-8leYNl7w",
     authDomain: "website-6fbae.firebaseapp.com",
     databaseURL: "https://website-6fbae-default-rtdb.asia-southeast1.firebasedatabase.app",
@@ -424,85 +1268,219 @@ Something new I will build in the future.
     storageBucket: "website-6fbae.firebasestorage.app",
     messagingSenderId: "47235445437",
     appId: "1:47235445437:web:38a0d61a1d346e6e5c7dd4"
-  };
+};
 
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 
-  const app = initializeApp(firebaseConfig);
-  const db = getDatabase(app);
+document.getElementById("commentForm")
+    .addEventListener("submit", async function (event) {
+        event.preventDefault();
 
+        const email = document.getElementById("email").value.trim();
+        const comment = document.getElementById("comment").value.trim();
+        const message = document.getElementById("message");
 
-  document
-    .getElementById("commentForm")
-    .addEventListener("submit", async function(e) {
+        try {
+            await push(ref(db, "comments"), {
+                email: email,
+                comment: comment,
+                time: Date.now()
+            });
 
-      e.preventDefault();
+            message.textContent =
+                document.documentElement.lang === "ja"
+                    ? message.dataset.jaSuccess
+                    : message.dataset.enSuccess;
 
-      const email = document.getElementById("email").value;
-      const comment = document.getElementById("comment").value;
+            this.reset();
+        } catch (error) {
+            console.error("Comment submission error:", error);
 
-      try {
-
-        await push(ref(db, "comments"), {
-          email: email,
-          comment: comment,
-          time: Date.now()
-        });
-
-        document.getElementById("message").textContent =
-          "Thank you! Your comment has been submitted.";
-
-        this.reset();
-
-      } catch (error) {
-
-        console.error(error);
-
-        document.getElementById("message").textContent =
-          "Something went wrong. Please try again.";
-
-      }
-
+            message.textContent =
+                document.documentElement.lang === "ja"
+                    ? message.dataset.jaError
+                    : message.dataset.enError;
+        }
     });
-
 </script>
 
-
-<section id="contact" class="section contact">
-
-<div class="section-title">
-<p>GET IN TOUCH</p>
-<h2>Contact Me</h2>
-</div>
-
-</section>
-<p class="contact-text">
-Interested in my work or want to connect?
-Feel free to contact me.
-</p>
-
-<div class="contact-links">
-<a href="mailto:safayedsahin@gmail.com">📧 Email</a>
-<a href="https://www.instagram.com/safayedsahin_">📷 Instagram</a>
-<a href="https://github.com/SafayedShahin">💻 GitHub</a>
-</div>
-
-</section>
+<!-- LANGUAGE SWITCH -->
 
 
 
-<footer>
 
-<h3>Md Shahin Miah</h3>
+<button id="languageToggle" class="language-toggle" type="button" aria-label="Change website language">🇯🇵 日本語</button>
+<script src="language.js"></script>
 
-<p>
-Technology • Adventure • Freedom
-</p>
 
-<p class="copyright">
-© 2026 Shahin Miah. All Rights Reserved.
-</p>
 
-</footer>
+<style>
+.typing-cursor::after {
+    content: "|";
+    display: inline-block;
+    margin-left: 3px;
+    color: #38bdf8;
+    animation: typingBlink 0.6s steps(1) infinite;
+}
+
+@keyframes typingBlink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .typing-cursor::after {
+        animation: none;
+    }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Existing important headings
+    const selectors = [
+        ".hero-text h2",
+        ".about-text h3",
+        ".my-ai-heading h2",
+        ".my-ai-ecosystem-heading h3",
+        "#languages .section-title h2",
+        "#Education .section-title h2",
+        "#IT-Experience .section-title h2",
+        "#adventure .section-title h2",
+        "#projects .section-title h2",
+        ".smartvixa-project .sv-intro h2"
+    ];
+
+    const headings = selectors
+        .map(selector => document.querySelector(selector))
+        .filter(Boolean);
+
+    // Only this paragraph will type a little faster
+    const heroParagraph = document.querySelector(
+        "#home .hero-text > p:not(.small-title)"
+    );
+
+    const targets = headings.map(element => ({
+        element: element,
+        speed: 65
+    }));
+
+    if (heroParagraph) {
+    targets.unshift({
+        element: heroParagraph,
+        speed: 25
+    });
+}
+
+    function typeText(element, speed) {
+        if (element.dataset.typingDone === "true") return;
+
+        const originalText = element.textContent.trim();
+        if (!originalText) return;
+
+        element.dataset.typingDone = "true";
+        element.setAttribute("aria-label", originalText);
+        element.textContent = "";
+        element.classList.add("typing-cursor");
+
+        let index = 0;
+
+        function typeNext() {
+            if (index < originalText.length) {
+                element.textContent += originalText.charAt(index);
+                index++;
+                setTimeout(typeNext, speed);
+            } else {
+                element.classList.remove("typing-cursor");
+            }
+        }
+
+        typeNext();
+    }
+
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+
+                const target = targets.find(
+                    item => item.element === entry.target
+                );
+
+                if (target) {
+                    typeText(target.element, target.speed);
+                }
+
+                observer.unobserve(entry.target);
+            });
+        }, { threshold: 0.15 });
+
+        targets.forEach(target => {
+            observer.observe(target.element);
+        });
+    } else {
+        targets.forEach((target, index) => {
+            setTimeout(
+                () => typeText(target.element, target.speed),
+                index * 200
+            );
+        });
+    }
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (!menuToggle || !navLinks) return;
+
+    function closeMenu() {
+        navLinks.classList.remove("active");
+        menuToggle.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+    }
+
+    menuToggle.addEventListener("click", function () {
+        const isOpen = navLinks.classList.toggle("active");
+
+        menuToggle.classList.toggle("active", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+    });
+
+    // Close menu after selecting a navigation link
+    navLinks.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function (event) {
+        if (
+            !navLinks.contains(event.target) &&
+            !menuToggle.contains(event.target)
+        ) {
+            closeMenu();
+        }
+    });
+
+    // Close menu with Escape key
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closeMenu();
+        }
+    });
+});
+</script>
+
 
 </body>
 </html>

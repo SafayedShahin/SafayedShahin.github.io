@@ -1,18 +1,595 @@
-<h1>project photos</h1>
-<h3> this is a collection of photos from my blender project</h3>
-<h3>POKEMON>>>><h1>SNORLAX</h1></h3>
-<link rel="stylesheet" href="../style.css">
-<img src="../images/blender/1.png" class="project-photo" onclick="openPhoto(this)">
-<img src="../images/blender/2.png" class="project-photo" onclick="openPhoto(this)">
-<img src="../images/blender/3.png" class="project-photo" onclick="openPhoto(this)">
-<img src="../images/blender/4.png" class="project-photo" onclick="openPhoto(this)">
 
-<h2>project video</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<video controls width="100%">
-<source src="../video/blender.mp4/Screen Recording 2026-09-10 at 2.40.29.mov" type="video/mp4" onelink="Pluginvideo(this)">
-</video>
-<div class="photo-popup" id="photoPopup">
-    <span class="close-photo" onelink="closePhoto()">x</span>
-    <img id="largePhoto">
+    <title>Blender Project | Snorlax</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../language-button.css">
+
+    <style>
+        :root {
+            --page-bg: #080d19;
+            --surface: #111b2f;
+            --surface-hover: #17243b;
+            --border: rgba(148, 170, 205, 0.20);
+            --text: #f0f5ff;
+            --muted: #aab8d0;
+            --accent: #70e1cf;
+        }
+
+        .blender-page,
+        .blender-page * {
+            box-sizing: border-box;
+        }
+
+        .blender-page {
+            width: min(1000px, 92%);
+            margin: 0 auto;
+            padding: 32px 0 55px;
+            color: var(--text);
+        }
+
+        /* PROJECT HEADER */
+        .blender-page > .project-header {
+            display: block;
+            position: static;
+            width: 100%;
+            max-width: none;
+            height: auto;
+            min-height: 0;
+            margin: 0 0 30px;
+            padding: 0;
+            border: 0;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+            text-align: center;
+        }
+
+        .blender-page .project-label {
+            display: inline-block;
+            margin: 0 0 10px;
+            padding: 5px 12px;
+            border: 1px solid rgba(112, 225, 207, 0.32);
+            border-radius: 30px;
+            background: rgba(112, 225, 207, 0.07);
+            color: var(--accent);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.1px;
+            text-transform: uppercase;
+        }
+
+        .blender-page .project-header h1 {
+            margin: 3px 0 10px;
+            padding: 0;
+            color: var(--text);
+            font-size: clamp(27px, 4vw, 36px);
+            font-weight: 750;
+            line-height: 1.25;
+            letter-spacing: -0.6px;
+        }
+
+        .blender-page .project-header p {
+            max-width: 550px;
+            margin: 0 auto;
+            padding: 0;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.8;
+            opacity: 1;
+        }
+
+        /* PROJECT INFORMATION */
+        .blender-page .project-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 17px;
+        }
+
+        .blender-page .project-info span {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: rgba(21, 33, 54, 0.75);
+            color: #dce6f7;
+            font-size: 12px;
+            font-weight: 550;
+        }
+
+        /* SECTION HEADINGS */
+        .blender-page section {
+            margin-top: 30px;
+        }
+
+        .blender-page .section-heading {
+            margin: 0 0 7px;
+            padding: 0;
+            color: var(--text);
+            font-size: 20px;
+            font-weight: 750;
+            line-height: 1.5;
+        }
+
+        .blender-page .section-description {
+            margin: 0 0 17px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.75;
+            opacity: 1;
+        }
+
+        /* PHOTO GALLERY */
+        .blender-page .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 17px;
+        }
+
+        .blender-page .photo-card {
+            min-width: 0;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            background: var(--surface);
+            cursor: pointer;
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .blender-page .photo-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(112, 225, 207, 0.45);
+            box-shadow: 0 13px 30px rgba(0, 0, 0, 0.22);
+        }
+
+        .blender-page .photo-card:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
+        }
+
+        .blender-page .photo-card img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: contain;
+            background: #0c1321;
+            transition: transform 0.3s ease;
+        }
+
+        .blender-page .photo-card:hover img {
+            transform: scale(1.025);
+        }
+
+        .blender-page .photo-caption {
+            padding: 12px 14px;
+            border-top: 1px solid rgba(148, 170, 205, 0.12);
+            color: #dce6f7;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        /* VIDEO */
+        .blender-page .video-card {
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            background: #05080e;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .blender-page .video-card video {
+            display: block;
+            width: 100%;
+            max-height: 520px;
+            background: #05080e;
+            object-fit: contain;
+        }
+
+        /* BACK LINK */
+        .blender-page .back-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            padding: 10px 16px;
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            background: rgba(21, 33, 54, 0.75);
+            color: #dce6f7;
+            font-size: 13px;
+            font-weight: 650;
+            text-decoration: none;
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .blender-page .back-link:hover {
+            transform: translateX(-3px);
+            border-color: rgba(112, 225, 207, 0.45);
+            background: var(--surface-hover);
+        }
+
+        /* IMAGE POPUP */
+        .photo-popup {
+            display: none;
+            position: fixed;
+            z-index: 99999;
+            inset: 0;
+            padding: 55px 20px 25px;
+            align-items: center;
+            justify-content: center;
+            background: rgba(3, 6, 13, 0.94);
+            backdrop-filter: blur(7px);
+        }
+
+        .photo-popup.active {
+            display: flex;
+        }
+
+        .photo-popup img {
+            display: block;
+            max-width: 95%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 9px;
+            box-shadow: 0 15px 55px rgba(0, 0, 0, 0.4);
+        }
+
+        .close-photo {
+            position: absolute;
+            top: 14px;
+            right: 24px;
+            color: #fff;
+            font-size: 35px;
+            line-height: 1;
+            cursor: pointer;
+            user-select: none;
+            transition: color 0.2s ease;
+        }
+
+        .close-photo:hover {
+            color: var(--accent);
+        }
+
+        /* TABLET */
+        @media (max-width: 700px) {
+            .blender-page {
+                width: 92%;
+                padding-top: 25px;
+                padding-bottom: 40px;
+            }
+
+            .blender-page .project-header h1 {
+                font-size: 30px;
+            }
+
+            .blender-page .photo-gallery {
+                gap: 12px;
+            }
+
+            .blender-page .section-heading {
+                font-size: 19px;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 480px) {
+            .blender-page {
+                width: calc(100% - 28px);
+                padding-top: 20px;
+            }
+
+            .blender-page > .project-header {
+                margin-bottom: 25px;
+            }
+
+            .blender-page .project-header h1 {
+                font-size: 27px;
+            }
+
+            .blender-page .project-header p {
+                font-size: 13px;
+            }
+
+            .blender-page .project-info {
+                gap: 7px;
+            }
+
+            .blender-page .project-info span {
+                padding: 6px 9px;
+                font-size: 11px;
+            }
+
+            .blender-page section {
+                margin-top: 25px;
+            }
+
+            .blender-page .photo-gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 9px;
+            }
+
+            .blender-page .photo-card {
+                border-radius: 10px;
+            }
+
+            .blender-page .photo-caption {
+                padding: 9px;
+                font-size: 11px;
+            }
+
+            .blender-page .section-heading {
+                font-size: 18px;
+            }
+
+            .blender-page .section-description {
+                font-size: 12px;
+            }
+
+            .photo-popup {
+                padding: 45px 10px 15px;
+            }
+
+            .photo-popup img {
+                max-width: 100%;
+                max-height: 82vh;
+            }
+
+            .close-photo {
+                top: 12px;
+                right: 15px;
+                font-size: 31px;
+            }
+        }
+
+        /* ACCESSIBILITY */
+        @media (prefers-reduced-motion: reduce) {
+            .blender-page *,
+            .photo-popup,
+            .close-photo {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="blender-page">
+
+    <!-- PROJECT HEADER -->
+    <header class="project-header">
+
+        <span class="project-label"
+              data-en="3D Design · Blender"
+              data-ja="3Dデザイン · Blender">
+            3D Design · Blender
+        </span>
+
+        <h1>Snorlax</h1>
+
+        <p
+            data-en="A collection of screenshots from my Blender 3D modeling project. Click any image to view it in full size."
+            data-ja="Blenderで制作した3Dモデリングプロジェクトの画像集です。画像をクリックすると、大きく表示できます。">
+            A collection of screenshots from my Blender 3D modeling
+            project. Click any image to view it in full size.
+        </p>
+
+        <div class="project-info">
+            <span data-en="🎨 3D Modeling" data-ja="🎨 3Dモデリング">
+                🎨 3D Modeling
+            </span>
+
+            <span data-en="🧊 Blender" data-ja="🧊 Blender">
+                🧊 Blender
+            </span>
+
+            <span data-en="📸 4 Photos" data-ja="📸 写真4枚">
+                📸 4 Photos
+            </span>
+        </div>
+
+    </header>
+
+    <!-- PHOTO GALLERY -->
+    <section>
+
+        <h2 class="section-heading"
+            data-en="Project Photos"
+            data-ja="プロジェクト写真">
+            Project Photos
+        </h2>
+
+        <p class="section-description"
+           data-en="Explore the different views of my Snorlax project."
+           data-ja="Snorlaxプロジェクトをさまざまな角度からご覧ください。">
+            Explore the different views of my Snorlax project.
+        </p>
+
+        <div class="photo-gallery">
+
+            <div class="photo-card"
+                 onclick="openPhoto(this)"
+                 role="button"
+                 tabindex="0"
+                 onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPhoto(this)}">
+
+                <img src="../images/blender/1.png"
+                     alt="Snorlax Blender project image 1"
+                     loading="lazy">
+
+                <div class="photo-caption"
+                     data-en="Project View 01"
+                     data-ja="プロジェクト画像 01">
+                    Project View 01
+                </div>
+            </div>
+
+            <div class="photo-card"
+                 onclick="openPhoto(this)"
+                 role="button"
+                 tabindex="0"
+                 onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPhoto(this)}">
+
+                <img src="../images/blender/2.png"
+                     alt="Snorlax Blender project image 2"
+                     loading="lazy">
+
+                <div class="photo-caption"
+                     data-en="Project View 02"
+                     data-ja="プロジェクト画像 02">
+                    Project View 02
+                </div>
+            </div>
+
+            <div class="photo-card"
+                 onclick="openPhoto(this)"
+                 role="button"
+                 tabindex="0"
+                 onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPhoto(this)}">
+
+                <img src="../images/blender/3.png"
+                     alt="Snorlax Blender project image 3"
+                     loading="lazy">
+
+                <div class="photo-caption"
+                     data-en="Project View 03"
+                     data-ja="プロジェクト画像 03">
+                    Project View 03
+                </div>
+            </div>
+
+            <div class="photo-card"
+                 onclick="openPhoto(this)"
+                 role="button"
+                 tabindex="0"
+                 onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPhoto(this)}">
+
+                <img src="../images/blender/4.png"
+                     alt="Snorlax Blender project image 4"
+                     loading="lazy">
+
+                <div class="photo-caption"
+                     data-en="Project View 04"
+                     data-ja="プロジェクト画像 04">
+                    Project View 04
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECT VIDEO -->
+    <section>
+
+        <h2 class="section-heading"
+            data-en="Project Video"
+            data-ja="プロジェクト動画">
+            Project Video
+        </h2>
+
+        <p class="section-description"
+           data-en="Watch the recording of my Blender project."
+           data-ja="Blenderプロジェクトの録画をご覧ください。">
+            Watch the recording of my Blender project.
+        </p>
+
+        <div class="video-card">
+            <video controls preload="metadata">
+                <source
+                    src="../video/blender.mp4/Screen%20Recording%202026-09-10%20at%202.40.29.mov"
+                    type="video/quicktime">
+
+                Your browser does not support video playback.
+            </video>
+        </div>
+    </section>
+
+    <!-- BACK TO PORTFOLIO -->
+    <a href="../index.html#projects"
+       class="back-link"
+       data-en="← Back to My Portfolio"
+       data-ja="← ポートフォリオに戻る">
+        ← Back to My Portfolio
+    </a>
+
+</main>
+
+<!-- IMAGE POPUP -->
+<div class="photo-popup"
+     id="photoPopup"
+     onclick="closePhoto()"
+     role="dialog"
+     aria-label="Full-size project photo">
+
+    <span class="close-photo"
+          onclick="closePhoto()"
+          aria-label="Close image"
+          role="button"
+          tabindex="0"
+          onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();closePhoto()}">
+        &times;
+    </span>
+
+    <img id="largePhoto"
+         src=""
+         alt="Full-size Blender project"
+         onclick="event.stopPropagation()">
 </div>
+
+<!-- PHOTO POPUP SCRIPT -->
+<script>
+    function openPhoto(card) {
+        const thumbnail = card.querySelector("img");
+        const popup = document.getElementById("photoPopup");
+        const largePhoto = document.getElementById("largePhoto");
+
+        largePhoto.src = thumbnail.src;
+        largePhoto.alt = thumbnail.alt;
+
+        popup.classList.add("active");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closePhoto() {
+        const popup = document.getElementById("photoPopup");
+
+        popup.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            closePhoto();
+        }
+    });
+</script>
+
+<!-- LANGUAGE TOGGLE -->
+<button
+    id="languageToggle"
+    class="language-toggle"
+    type="button"
+    aria-label="Change website language">
+    🇯🇵 日本語
+</button>
+
+<script src="../language.js"></script>
+
+</body>
+</html>
