@@ -68,3 +68,9 @@ node_modules/
 # dataconnect generated files
 .dataconnect
 video/blender.mp4/
+
+# Firebase files - do not upload to GitHub
+.firebaserc
+firebase.json
+firebase-index.html
+firebase-style.css
